@@ -3,3 +3,4 @@
 !.git*
 !.rvmrc
 build/
+components/

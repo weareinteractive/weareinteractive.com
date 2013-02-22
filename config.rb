@@ -1,8 +1,35 @@
-#Markdown
+###
+# Required Gems
+###
+
+###
+# Settings
+###
+
+set :site_title, "Site name"
+set :site_url, "http://www.spriteowl.com"
+set :site_description, "Meta description."
+set :site_keywords, "keyword-one, keyword-two"
+
+###
+# Markdown
+###
 set :markdown_engine, :redcarpet
 
-#Livereload
+###
+# LiveReload
+###
 activate :livereload
+
+###
+# Assets
+###
+
+set :css_dir, 'assets/css'
+set :js_dir, 'assets/js'
+set :images_dir, 'assets/img'
+set :js_assets_paths, ["#{root}/components/"]
+set :css_assets_paths, ["#{root}/components//"]
 
 ###
 # Compass
@@ -53,12 +80,6 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'assets/css'
-
-set :js_dir, 'assets/js'
-
-set :images_dir, 'assets/img'
-
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -74,7 +95,7 @@ configure :build do
   activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
