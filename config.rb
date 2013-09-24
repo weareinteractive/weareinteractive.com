@@ -1,43 +1,13 @@
 ###
-# Required Gems
-###
-
-###
 # Settings
 ###
 
-set :site_title, "Site name"
-set :site_url, "http://www.spriteowl.com"
-set :site_description, "Meta description."
-set :site_keywords, "keyword-one, keyword-two"
-
-###
-# Markdown
-###
-set :markdown_engine, :redcarpet
-
-###
-# LiveReload
-###
-activate :livereload
-
-###
-# Assets
-###
-
-set :css_dir, 'assets/css'
-set :js_dir, 'assets/js'
-set :images_dir, 'assets/img'
-set :js_assets_paths, ["#{root}/components/"]
-set :css_assets_paths, ["#{root}/components//"]
+set :site_name, "We Are Interactive"
+set :site_description, "Edit your config.rb to set the global description."
 
 ###
 # Compass
 ###
-
-# Susy grids in Compass
-# First: gem install compass-susy-plugin
-# require 'susy'
 
 # Change Compass configuration
 # compass_config do |config|
@@ -51,7 +21,7 @@ set :css_assets_paths, ["#{root}/components//"]
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
+page "/404.html", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
@@ -61,10 +31,9 @@ set :css_assets_paths, ["#{root}/components//"]
 #   page "/admin/*"
 # end
 
-# Proxy (fake) files
-# page "/this-page-has-no-template.html", :proxy => "/template-file.html" do
-#   @which_fake_page = "Rendering a fake page with a variable"
-# end
+# Proxy pages (http://middlemanapp.com/dynamic-pages/)
+# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
+#  :which_fake_page => "Rendering a fake page with a local variable" }
 
 ###
 # Helpers
@@ -73,6 +42,9 @@ set :css_assets_paths, ["#{root}/components//"]
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+# Reload the browser automatically whenever files change
+activate :livereload
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -80,28 +52,28 @@ set :css_assets_paths, ["#{root}/components//"]
 #   end
 # end
 
+###
+# Assets
+###
+
+set :js_dir, 'assets/js'
+set :css_dir, 'assets/css'
+set :images_dir, 'assets/img'
+set :fonts_dir, 'assets/fonts'
+
+sprockets.append_path File.join "#{root}", "bower_components"
+
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
-
-  # Create favicon/touch icon set from source/favicon_base.png
   activate :favicon_maker
-
-  # Enable cache buster
   activate :cache_buster
-
-  # Use relative URLs
   activate :relative_assets
 
-  # Compress PNGs after build
-  # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  # Enable cache buster
+  # activate :asset_hash
 
   # Or use a different image path
-  # set :http_path, "/Content/images/"
+  # set :http_prefix, "/Content/images/"
 end

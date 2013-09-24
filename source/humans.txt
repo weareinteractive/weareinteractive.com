@@ -1,9 +1,0 @@
-/* TEAM */
-    Agency: We Are Interactive
-    Contact: office [at] weareinteractive.com
-    From: Munich, Germany
-
-/* SITE */
-    Language: English
-    Doctype: HTML5
-                    

@@ -1,6 +1,6 @@
 {
-  "name": "spriteowl",
-  "version": "0.1.0",
+  "name": "weareinteractive",
+  "private": true,
   "dependencies": {
     "jquery": "~1.9.1",
     "modernizr": "~2.6.2",
