@@ -4,7 +4,6 @@ source 'http://rubygems.org'
 gem "middleman", "~>3.1.5"
 gem "middleman-favicon-maker"
 gem "middleman-livereload", "~> 3.1.0"
-gem "susy", "~> 1.0.9"
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
