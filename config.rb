@@ -51,11 +51,8 @@ configure :build do
   activate :minify_javascript
   # others
   activate :cache_buster
+  activate :favicon_maker
   activate :relative_assets
-  # favicons
-  activate :favicon_maker,
-    :favicon_maker_input_dir => "source/assets/img",
-    :favicon_maker_output_dir => "build/assets/img"
   # analytics
   activate :google_analytics do |ga|
     ga.anonymize_ip = true
