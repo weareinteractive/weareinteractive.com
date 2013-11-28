@@ -14,6 +14,14 @@ page "/404.html", :layout => false
 # Reload the browser automatically whenever files change
 activate :livereload
 
+# Deploy-specific configuration
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.method = :rsync
+  deploy.host   = "www.weareinteractive.com"
+  deploy.path   = "/var/www/weareinteractive.com/htdocs"
+end
+
 ###
 # Assets
 ###
@@ -38,21 +46,19 @@ end
 
 # Build-specific configuration
 configure :build do
+  # cache
   activate :minify_css
-  activate :cache_buster
-  activate :favicon_maker
-  activate :relative_assets
   activate :minify_javascript
+  # others
+  activate :cache_buster
+  activate :relative_assets
+  # favicons
+  activate :favicon_maker,
+    :favicon_maker_input_dir => "source/assets/img",
+    :favicon_maker_output_dir => "build/assets/img"
+  # analytics
   activate :google_analytics do |ga|
     ga.anonymize_ip = true
     ga.tracking_id = data.site.ga_account
   end
-end
-
-# Deploy-specific configuration
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.method = :rsync
-  deploy.host   = "www.weareinteractive.com"
-  deploy.path   = "/var/www/weareinteractive.com/htdocs"
 end

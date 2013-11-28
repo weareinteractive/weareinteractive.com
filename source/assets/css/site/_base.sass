@@ -1,0 +1,34 @@
+// ---- global ------------------------------------------------------------------------------------
+
+html
+  font-size: 100%
+
+body
+  margin-top: 68px
+  text-align: center
+  color: $color-primary
+  background-color: $black-light
+
+h1, h2, h3, h4, h5, p
+  font-weight: normal
+  line-height: $line-height-base
+
+a
+  outline: none
+  color: $link-color
+  text-decoration: none
+  +transition-duration(0.2s)
+  +transition-property(color)
+
+  &:hover, &:active, &:focus
+    outline: none
+    color: $link-color
+    text-decoration: none
+  &:hover
+    text-decoration: underline
+
+button
+  border: none
+  padding: 0 10px
+  box-shadow: none
+  +border-radius($border-radius)

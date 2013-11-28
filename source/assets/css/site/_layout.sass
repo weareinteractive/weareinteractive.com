@@ -1,38 +1,3 @@
-// ---- global ------------------------------------------------------------------------------------
-
-html
-  font-size: 100%
-
-body
-  margin-top: 68px
-  text-align: center
-  color: $color-primary
-  background-color: $black-light
-
-h1, h2, h3, h4, h5, p
-  font-weight: normal
-  line-height: $line-height-base
-
-a
-  outline: none
-  color: $link-color
-  text-decoration: none
-  +transition-duration(0.2s)
-  +transition-property(color)
-
-  &:hover, &:active, &:focus
-    outline: none
-    color: $link-color
-    text-decoration: none
-  &:hover
-    text-decoration: underline
-
-button
-  border: none
-  padding: 0 10px
-  box-shadow: none
-  +border-radius($border-radius)
-
 // ---- layout ------------------------------------------------------------------------------------
 
 // --- header ---
@@ -103,13 +68,13 @@ button
   background-position: center 68px
 
   .theme-1 &
-    background-image: url("/assets/img/background-01.jpg")
+    background-image: url("/assets/img/theme/background-01.jpg")
   .theme-2 &
-    background-image: url("/assets/img/background-02.jpg")
+    background-image: url("/assets/img/theme/background-02.jpg")
   .theme-3 &
-    background-image: url("/assets/img/background-03.jpg")
+    background-image: url("/assets/img/theme/background-03.jpg")
   .theme-4 &
-    background-image: url("/assets/img/background-04.jpg")
+    background-image: url("/assets/img/theme/background-04.jpg")
 
 
 // --- main ---
@@ -128,6 +93,9 @@ button
       border-top: 1px solid rgba(0, 0, 0, 0.2)
 
   .header
+
+    > .title
+      font-size: 2rem
 
     > .description
       margin-bottom: 50px
