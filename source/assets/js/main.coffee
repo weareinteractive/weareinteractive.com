@@ -7,7 +7,13 @@
 
 $(document).ready ->
 
-  # google maps
+  theme = Math.floor(Math.random() * 4)
+  themeColors = ['#ae2c3c', '#569dd4', '#95a13b', '#e4980b']
+
+  # --- theme  ---
+  $('body').addClass('theme-' + (theme + 1))
+
+  # --- google maps ---
   latlng = new google.maps.LatLng(48.12882, 11.584729)
   myOptions =
     zoom: 16
@@ -16,7 +22,7 @@ $(document).ready ->
     mapTypeId: google.maps.MapTypeId.ROADMAP
 
   map = new google.maps.Map(document.getElementById("map_canvas"), myOptions)
-  styles = [stylers: [hue: '#ccdddd']]
+  styles = [stylers: [hue: themeColors[theme]]]
   map.setOptions styles: styles
   image = new google.maps.MarkerImage("/assets/img/gmaps-image.png", new google.maps.Size(38, 48), new google.maps.Point(0, 0), new google.maps.Point(19, 48))
   shadow = new google.maps.MarkerImage("/assets/img/gmaps-shadow.png", new google.maps.Size(66, 48), new google.maps.Point(0, 0), new google.maps.Point(19, 48))
@@ -33,10 +39,11 @@ $(document).ready ->
     title: "We Are Interactive"
   )
 
-  $('body').scrollspy({ target: '#header', offset: 80 })
+  # --- scrollspy  ---
 
+  $('body').scrollspy({ target: '#header', offset: 60 })
   $("#header nav a[href^='#']").on('click', (e) ->
     e.preventDefault()
     hash = this.hash
-    $('html, body').animate({scrollTop: $(@hash).offset().top - 80}, 300)
+    $('html, body').animate({scrollTop: $(@hash).offset().top - 55}, 300)
   )
