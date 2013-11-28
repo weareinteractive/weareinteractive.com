@@ -1,0 +1,333 @@
+// ---- global ------------------------------------------------------------------------------------
+
+html
+  font-size: 100%
+
+body
+  margin-top: 68px
+  text-align: center
+  color: $color-primary
+  background-color: $black-light
+
+h1, h2, h3, h4, h5, p
+  font-weight: normal
+  line-height: $line-height-base
+
+a
+  outline: none
+  text-decoration: none
+  +transition-duration(0.2s)
+  +transition-property(color)
+
+  &:active, &:focus, &:active
+    outline: none
+    text-decoration: none
+  &:hover
+    text-decoration: underline
+
+button
+  border: none
+  padding: 0 10px
+  box-shadow: none
+  +border-radius($border-radius)
+
+// ---- layout ------------------------------------------------------------------------------------
+
+// --- header ---
+
+#header
+  background: $black
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13)
+
+  .container
+    position: relative
+
+  .navbar-header
+    height: 68px
+
+    .navbar-brand
+      float: left
+      font-size: 1.8rem
+      line-height: 55px
+      color: $color-primary
+      padding: 6px 0 0 10px
+
+      &:hover
+        text-decoration: none
+
+    .navbar-toggle
+      margin-top: 17px
+      background: $color-background
+      +border-radius($border-radius)
+      border: 1px solid $color-border
+
+      >.icon-bar
+        background: $colorFontDefault
+
+  .navbar-collapse
+    padding: 10px 0
+    background: $black
+
+    .nav
+      margin: 0
+      padding: 0
+      list-style-type: none
+
+      > li
+        padding: 5px 0
+        text-transform: uppercase
+
+        a:hover
+        &.active a
+          color: $colorFontGrey
+          text-decoration: none
+
+
+// --- background ---
+
+#background
+  top: 0
+  z-index: -1
+  width: 100%
+  height: 100%
+  position: fixed
+  background: url("/assets/img/background-01.jpg") no-repeat center 68px
+
+// --- main ---
+
+#main
+  width: 100%
+
+  .wrapper
+    width: 100%
+    padding-top: 10px
+    padding-bottom: 300px
+    border-top: 1px solid rgba(0, 0, 0, 0.3)
+
+    &:nth-child(even)
+      background: rgba(0, 0, 0, 0.2)
+      border-top: 1px solid rgba(0, 0, 0, 0.2)
+
+  .header
+
+    > .description
+      margin-bottom: 50px
+
+
+// --- home ---
+
+#home
+
+  &.wrapper
+    padding-top: 110px
+
+  .header
+
+    > .title
+      font-size: 2.5rem
+      line-height: 1.3em
+      margin-bottom: 50px
+
+    > .description
+      font-size: 1.5rem
+
+// --- portfolio ---
+
+#portfolio
+
+  .item
+    margin-bottom: 50px
+
+    > .thumb
+      margin: 0 auto
+      position: relative
+      display: inline-block
+
+      > .award
+        top: -10px
+        right: 10px
+        position: absolute
+
+      > .meta
+        top: 0
+        left: 0
+        +opacity(0)
+        width: 100%
+        height: 100%
+        position: absolute
+        +transition-duration(0.3s)
+        +transition-property(opacity)
+        background: rgba(0, 0, 0, 0.8)
+
+        > .metadescription
+          width: 100%
+          bottom: 50px
+          position: absolute
+
+        > .link
+          left: 50%
+          width: 130px
+          bottom: 10px
+          margin-left: -65px
+          position: absolute
+          background: $color-primary
+          +border-radius(3px)
+
+      &:hover
+        > .meta
+          +opacity(1)
+
+    > .title
+      margin-top: 20px
+      margin-bottom: 20px
+
+    > .description
+      height: 3em
+
+
+// --- services ---
+
+#services
+
+  .item
+    margin-bottom: 50px
+
+    > .thumb
+      width: 240px
+      height: 240px
+      position: relative
+      display: inline-block
+      background-image: $sprite
+      background-position: -10px -250px
+
+      > *
+        top: 50%
+        left: 50%
+        width: 80px
+        height: 80px
+        margin-top: -40px
+        margin-left: -40px
+        position: absolute
+        background-image: $sprite
+
+      > .thumb-concept
+        background-position: -86px -534px
+
+      > .thumb-design
+        background-position: -88px -632px
+
+      > .thumb-code
+        background-position: -86px -731px
+
+    > .title
+      margin-bottom: 20px
+
+    > .listitem
+      padding-left: 0
+      list-style-position: inside
+
+// --- about ---
+
+#about
+  .item
+    margin-bottom: 50px
+
+    .thumb
+      width: 240px
+      height: 240px
+      position: relative
+      display: inline-block
+      background-image: $sprite
+      background-position: -10px -250px
+
+      > *
+        top: 50%
+        left: 50%
+        width: 80px
+        height: 80px
+        margin-top: -40px
+        margin-left: -40px
+        position: absolute
+        background-image: $sprite
+
+      > .thumb-kevin
+        background-position: 220px -530px
+
+      > .thumb-basti
+        background-position: 225px -630px
+
+// --- contact ---
+
+#contact
+
+  .gmaps
+    height: 280px
+
+  .address
+    margin-top: 20px
+    font-style: normal
+
+// --- footer ----
+
+#footer
+
+  .content
+
+    > .description
+      color: $colorFontGrey
+      margin-top: 20px !important
+
+      a
+        color: $colorFontGrey
+
+// --- imprint ------------------------------------------------------------------------------------
+
+#imprintModal
+  text-align: left
+  color: $black-light
+
+  .head
+    color: $colorFontGrey
+    display: inline
+
+  .modal-content
+    +border-radius($border-radius)
+
+    .modal-header
+      .close
+        float: right
+
+      h4
+        margin: 0
+
+// ---- media -------------------------------------------------------------------------------------
+
+@media (min-width: $screen-phone)
+
+@media (min-width: $screen-tablet)
+
+  #header
+
+    .navbar-brand:before
+      content: ""
+      width: 55px
+      height: 55px
+      margin-bottom: -15px
+      display: inline-block
+      background-image: $sprite
+      background-position: -10px -10px
+
+    .navbar-collapse
+      padding: 21px 0 13px
+
+      .nav li
+        margin-left: 15px
+
+
+  #contact
+
+    .address
+      text-align: left
+
+@media (min-width: $screen-desktop)
+

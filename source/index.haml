@@ -1,8 +1,212 @@
----
-title: Welcome to Middleman
----
+// --- home ---
+#home.wrapper
+  .container
+    .row.header
+      %h1.title.col-md-12
+        Willkommen bei We Are Interactive!
+      %p.description.col-md-12
+        In unserem Studio in München bieten wir Ihnen ein ganzheitliches Leistungsspektrum von Konzept über Design bis hin zur Programmierung innovativer und preisgekrönter Webseiten und Applikationen.
 
-.welcome
-  %h1 Middleman is Watching :)
-  %p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+// --- portfolio ---
+#portfolio.wrapper
+  .container
+    .row.header
+      %h2.col-md-12.title
+        Projekte
+      %p.col-md-10.col-md-offset-1.description
+        In den letzten 11 Jahren konnten wir durch eine enge Zusammenarbeit mit Agenturen für internationale Kunden aus verschiedensten Branchen - wie Bogner, Marc O'Polo, s.Oliver, Roeckl, BMW, FedEx und NBCUniversal - arbeiten. Die Resultate überzeugten nicht nur unsere Kunden, sondern auch die Fachjury namhafter Kreativwettbewerbe wie etwa des red dot oder Promax.
+        Hier ein Auszug aus unseren erfolgreichen Projekten in den Bereichen Screendesign und Web Development:
+
+    .row
+      .item.col-md-4.col-sm-6
+        .thumb
+          %img{alt: "World of Bogner", src: "/assets/img/project-bogner.jpg"}
+          .meta
+            %p.metadescription
+              Fashion / Online-Shop
+              %br
+              Ausgezeichnet mit dem red dot
+              %br
+              %br
+              Umgesetzt für
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+            %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
+          %img.award{alt: "red dot", src: "/assets/img/reddot.gif"}
+        %h3.title World of Bogner
+        %p.description
+          Konzept, Screendesign,
+          %br
+          Flash/Html-Programmierung
+
+      .item.col-md-4.col-sm-6
+        .thumb
+          %img{alt: "Angeln.de", src: "/assets/img/project-angeln.jpg"}
+          .meta
+            %p.metadescription
+              Special-Interest Medienhaus
+              %br
+              Community rund ums Angeln
+            %a.link{href: "http://www.angeln.de", target: "_blank", title: "Zur Angeln.de Webseite"} Zur Webseite
+        %h3.title Angeln.de
+        %p.description
+          Konzept, Screendesign,
+          %br
+          Frontend-Programmierung
+
+      .item.col-md-4.col-sm-6
+        .thumb
+          %img{alt: "vs.YOU", src: "/assets/img/project-vsyou.jpg"}
+          .meta
+            %p.metadescription
+              Graffity, Cars  Toys
+              %br
+              Online-Shop / Blog
+            %a.link{href: "http://www.thevsyou.com/", target: "_blank", title: "Zur vs.YOU Webseite"} Zur Webseite
+        %h3.title vs.YOU
+        %p.description
+          Screendesign,
+          %br
+          Frontend/Backend-Programmierung
+
+      .item.col-md-4.col-sm-6
+        .thumb
+          %img{alt: "The Biography Channel", src: "/assets/img/project-biography-channel.jpg"}
+          .meta
+            %p.metadescription
+              TV-Sender
+              %br
+              %br
+              Umgesetzt für
+              %a{href: "http://www.janusmedia.de", target: "_blank"} Janusmedia
+            %a.link{href: "http://www.thebiographychannel.de/", target: "_blank", title: "Zur Biography Channel Webseite"} Zur Webseite
+        %h3.title The Biography Channel
+        %p.description Screendesign
+
+      .item.col-md-4.col-sm-6
+        .thumb
+          %img{alt: "Roeckl Sports", src: "/assets/img/project-roeckl.jpg"}
+          .meta
+            %p.metadescription
+              Sportspezialist
+              %br
+              %br
+              Umgesetzt für
+              %a{href: "http://www.dpool.de", target: "_blank"} dpool
+            %a.link{href: "http://www.roeckl.de/", target: "_blank", title: "Zur Roeckl Sports Webseite"} Zur Webseite
+        %h3.title Roeckl Sports
+        %p.description Screendesign
+
+      .item.col-md-4.col-sm-6
+        .thumb
+          %img{alt: "eCircle", src: "/assets/img/project-ecircle.jpg"}
+          .meta
+            %p.metadescription
+              Technologieanbieter  Werbevermarkter
+              %br
+              %br
+              Umgesetzt für
+              %a{href: "http://www.dpool.de", target: "_blank"} dpool
+            %a.link{href: "http://www.ecircle.com/de/home.html", target: "_blank", title: "Zur eCircle Webseite"} Zur Webseite
+        %h3.title eCircle
+        %p.description Screendesign
+
+// --- services ---
+#services.wrapper
+  .container
+    .row.header
+      %h2.col-md-12.title Leistungen
+
+    .row
+      .item.col-md-4.col-sm-4
+        .thumb
+          .thumb-concept
+        %h3.title Strategie  Planung
+        %ul.listitem
+          %li Zielgruppenanalyse
+          %li Web, Game, App Konzeption
+          %li Informationsarchitektur
+          %li Wireframes
+
+      .item.col-md-4.col-sm-4
+        .thumb
+          .thumb-design
+        %h3.title Design
+        %ul.listitem
+          %li Web Design
+          %li Mobile Design
+          %li Game Design
+          %li Interaction Design
+
+      .item.col-md-4.col-sm-4
+        .thumb
+          .thumb-code
+        %h3.title Entwicklung
+        %ul.listitem
+          %li Mobile, Web Development
+          %li Flash, Flex, Air Development
+          %li CMS, Framework Development
+          %li Online Game Development
+
+// --- about ---
+#about.wrapper
+  .container
+    .row.header
+      %h2.col-md-12.title
+        Über uns
+      %p.col-md-12.description
+        In unserem Münchner Studio an der schönen Isar realisieren wir gestalterisch begeisternde, technisch innovative  und mehrfach ausgezeichnete 0nline- und Mobile-Projekte. Profitieren auch Sie von unserer langjährigen Erfahrung und Leidenschaft für alles Interaktive und buchen Sie uns flexibel auf Projektbasis.
+
+    .row.item
+      .col-md-4.col-md-push-8.col-sm-4.col-sm-push-8
+        .thumb
+          .thumb-basti
+      .col-md-8.col-md-pull-4.col-sm-8.col-sm-pull-4
+        %h3.title Sebastian Pollak
+        %p.description
+          Seit über 12 Jahren im Geschäft. Konzeption / Screendesign / Web Development
+          %br
+          %br
+          %span
+            %a{href: "tel:+498962286774"} T. +49 (0)89 - 62 28 67 74
+          %br
+          %a{href: "mailto:sebastian@weareinteractive.com"} sebastian@weareinteractive.com
+
+    .row.item
+      .col-md-4.col-sm-4
+        .thumb
+          .thumb-kevin
+      .col-md-8.col-sm-8
+        %h3.title Kevin Kim
+        %p.description
+          Über 8 Jahre Erfahrung.
+          Konzeption / Mobile, Web, Framework Development
+          %br
+          %br
+          %span
+            %a{href: "tel:+498962286776"} T. +49 (0)89 - 62 28 67 76
+          %br
+          %a{href: "mailto:kevin@weareinteractive.com"} kevin@weareinteractive.com
+
+// --- contact ---
+#contact.wrapper
+  .container
+    .row.header
+      %h2.col-md-12.title Kontakt
+      %p.col-md-12.description
+        Sie denken gerade über ein spannendes Online-Projekt nach? Dann freuen wir uns auf Ihre Anfrage!
+    .row
+      .gmaps.col-md-8.col-md-push-4.col-sm-8.col-sm-push-4
+        #map_canvas{style: "width:100%; height:100%"}
+      %address.address.col-md-4.col-md-pull-8.col-sm-4.col-sm-pull-8
+        We Are Interactive
+        %br
+        Zeppelinstr. 55
+        %br
+        81669 München
+        %br
+        %br
+        %span
+          %a{href: "tel:+498962286775"} T. +49 (0)89 - 62 28 67 75
+        %br
+        %span.mail
+          %a{href: "mailto:office@weareinteractive.de"} office@weareinteractive.de
