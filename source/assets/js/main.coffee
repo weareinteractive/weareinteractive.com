@@ -44,6 +44,5 @@ $(document).ready ->
   $('body').scrollspy({ target: '#header', offset: 60 })
   $("#header nav a[href^='#']").on('click', (e) ->
     e.preventDefault()
-    hash = this.hash
     $('html, body').animate({scrollTop: $(@hash).offset().top - 55}, 300)
   )
