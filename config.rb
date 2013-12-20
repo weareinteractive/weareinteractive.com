@@ -1,5 +1,3 @@
-require 'builder'
-
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -24,7 +22,7 @@ activate :deploy do |deploy|
   deploy.clean  = true
   deploy.host   = "www.weareinteractive.com"
   deploy.path   = "/var/www/weareinteractive.com/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w -e"
+  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
 end
 
 ###
@@ -60,10 +58,8 @@ configure :build do
     options.advpng_options    = false
   end
   # others
-  activate :asset_hash
   activate :cache_buster
   activate :favicon_maker
-  activate :relative_assets
   # analytics
   activate :google_analytics do |ga|
     ga.anonymize_ip = true
