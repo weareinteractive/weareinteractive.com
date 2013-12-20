@@ -1,5 +1,4 @@
-// --- home ---
-#home.wrapper
+%section#home.wrapper
   .container
     .row.header
       %h1.title.col-md-12
@@ -7,8 +6,8 @@
       %p.description.col-md-12
         In unserem Studio in München bieten wir Ihnen ein ganzheitliches Leistungsspektrum von Konzept über Design bis hin zur Programmierung innovativer und preisgekrönter Webseiten und Applikationen.
 
-// --- portfolio ---
-#portfolio.wrapper
+
+%section#portfolio.wrapper
   .container
     .row.header
       %h2.col-md-12.title
@@ -20,7 +19,7 @@
     .row
       .item.col-md-4.col-sm-6
         .thumb
-          %img{alt: "World of Bogner", src: "/assets/img/projects/bogner.jpg"}
+          =image_tag "projects/bogner.jpg", :alt => "World of Bogner"
           .meta
             %p.metadescription
               Fashion / Online-Shop
@@ -31,7 +30,7 @@
               Umgesetzt für
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
             %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
-          %img.award{alt: "red dot", src: "/assets/img/awards/reddot.gif"}
+          =image_tag "awards/reddot.gif", :alt => "reddot", :class => "award"
         %h3.title World of Bogner
         %p.description
           Konzept, Screendesign,
@@ -40,7 +39,7 @@
 
       .item.col-md-4.col-sm-6
         .thumb
-          %img{alt: "Angeln.de", src: "/assets/img/projects/angeln.jpg"}
+          =image_tag "projects/angeln.jpg", :alt => "Angeln.de"
           .meta
             %p.metadescription
               Special-Interest Medienhaus
@@ -55,7 +54,7 @@
 
       .item.col-md-4.col-sm-6
         .thumb
-          %img{alt: "vs.YOU", src: "/assets/img/projects/vsyou.jpg"}
+          =image_tag "projects/vsyou.jpg", :alt => "vs.YOU"
           .meta
             %p.metadescription
               Graffity, Cars  Toys
@@ -70,7 +69,7 @@
 
       .item.col-md-4.col-sm-6
         .thumb
-          %img{alt: "The Biography Channel", src: "/assets/img/projects/biography-channel.jpg"}
+          =image_tag "projects/biography-channel.jpg", :alt => "The Biography Channel"
           .meta
             %p.metadescription
               TV-Sender
@@ -84,7 +83,7 @@
 
       .item.col-md-4.col-sm-6
         .thumb
-          %img{alt: "Roeckl Sports", src: "/assets/img/projects/roeckl.jpg"}
+          =image_tag "projects/roeckl.jpg", :alt => "Roeckl Sports"
           .meta
             %p.metadescription
               Sportspezialist
@@ -98,7 +97,7 @@
 
       .item.col-md-4.col-sm-6
         .thumb
-          %img{alt: "eCircle", src: "/assets/img/projects/ecircle.jpg"}
+          =image_tag "projects/ecircle.jpg", :alt => "eCircle"
           .meta
             %p.metadescription
               Technologieanbieter  Werbevermarkter
@@ -110,8 +109,7 @@
         %h3.title eCircle
         %p.description Screendesign
 
-// --- services ---
-#services.wrapper
+%section#services.wrapper
   .container
     .row.header
       %h2.col-md-12.title Leistungen
@@ -147,8 +145,8 @@
           %li CMS, Framework Development
           %li Online Game Development
 
-// --- about ---
-#about.wrapper
+
+%section#about.wrapper
   .container
     .row.header
       %h2.col-md-12.title
@@ -187,8 +185,8 @@
           %br
           %a{href: "mailto:kevin@weareinteractive.com"} kevin@weareinteractive.com
 
-// --- contact ---
-#contact.wrapper
+
+%section#contact.wrapper
   .container
     .row.header
       %h2.col-md-12.title Kontakt

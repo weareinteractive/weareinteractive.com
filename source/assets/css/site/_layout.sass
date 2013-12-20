@@ -1,6 +1,4 @@
-// ---- layout ------------------------------------------------------------------------------------
-
-// --- header ---
+// --- header -------------------------------------------------------------------------------------
 
 #header
   background: $black
@@ -269,23 +267,31 @@
 
 // --- imprint ------------------------------------------------------------------------------------
 
-#imprintModal
+#imprint
   text-align: left
   color: $black-light
 
-  .head
-    color: $colorFontGrey
-    display: inline
+  .title
+    margin: 0
 
   .modal-content
     +border-radius($border-radius)
 
-    .modal-header
-      .close
-        float: right
+    strong
+      color: $colorFontGrey
 
-      h4
-        margin: 0
+    > .modal-header
+      position: relative
+
+      .close
+        height: auto
+        padding: 0 10px 5px
+        +cssowl-position-absolute(20px, 20px)
+
+    > .modal-body
+
+      p
+        text-align: justify
 
 // ---- media -------------------------------------------------------------------------------------
 
