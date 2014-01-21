@@ -21,7 +21,7 @@ activate :deploy do |deploy|
   deploy.method = :rsync
   deploy.clean  = true
   deploy.host   = "www.weareinteractive.com"
-  deploy.path   = "/var/www/weareinteractive.com/htdocs"
+  deploy.path   = "/var/www/weareinteractive/htdocs"
   deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
 end
 
