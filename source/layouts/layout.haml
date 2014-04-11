@@ -31,8 +31,13 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-
-          =link_to "We Are Interactive", "#main", :class => "navbar-brand"
+          %a.logo.navbar-brand{title: "We Are Interactvie", href: "#main"}
+            %svg.logo-icon{"enable-background" => "new 0 0 48 48", version: "1.1", viewbox: "0 0 48 48", x: "0px", "xml:space" => "preserve", xmlns: "http://www.w3.org/2000/svg", "xmlns:xlink" => "http://www.w3.org/1999/xlink", y: "0px"}
+              %g
+                %path{d: "M24,0C10.746,0,0,10.746,0,24c0,13.254,10.746,24,24,24c13.255,0,24-10.746,24-24C48,10.746,37.255,0,24,0z\r\n\t\t M21.025,33.717l-3.408-15.643l-3.278,15.643h-3.8L6.468,14.282h2.153l3.595,17.455h0.504l3.785-17.183h2.243l3.867,17.183h0.531\r\n\t\tl3.486-17.455h2.152l-3.96,19.435H21.025z M35.771,33.718l-3.413-17.456h-0.526l-3.486,17.455h-2.152l3.959-19.435h3.801\r\n\t\tl3.97,19.435H35.771z M39.379,33.717l-4.07-19.435h2.152l4.071,19.435H39.379z", fill: "#FFFFFF"}
+            .logo-typo We Are Interactive
+          
+          /=link_to "We Are Interactive", "#main", :class => "navbar-brand"
 
         %nav.collapse.navbar-collapse.navbar-right{role:"navigation"}
           %ul.nav.navbar-nav
@@ -41,25 +46,19 @@
             %li
               =link_to "Projekte", "#portfolio"
             %li
-              =link_to "Leistungen", "#services"
-            %li
               =link_to "Über uns", "#about"
             %li
               =link_to "Kontakt", "#contact"
+             
 
-    #background
-
-    %article#main{role:"main"}
+    #main{role:"main"}
       = yield
 
       %footer#footer.wrapper
         .container
           .row.content
             .description.col-md-12
-              We Are Interactive, Zeppelinstr. 55, 81669 München, Deutschland
-              %br
-              +49 (0) 89 - 62286775,
-              =link_to "office@weareinteractive.com", "mailto:office@weareinteractive.com"
+              Copyright by We Are Interactive
               ,
               =link_to "Impressum", "#imprint", :data => {:toggle => "modal"}
 

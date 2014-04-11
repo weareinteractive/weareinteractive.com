@@ -1,0 +1,202 @@
+// Generated with Spriteowl (compiler version 1.3.0)
+//
+// Please define the location for your image source:
+//
+// $sprite-sheet-image: url("sprite.png")
+// $sprite-sheet-image-2x: url("sprite@2x.png")
+//
+// --- Layers --------------------------------------------
+//
+// - sprite/
+//   - icons/
+//     - strategy
+//     - design
+//     - development
+//     - magicDevelop
+//     - magicDesign
+//
+$sprite-sheet-width: 150px !default
+$sprite-sheet-height: 250px !default
+$sprite-sheet-image: url("sprite.png") !default
+$sprite-sheet-image-2x: url("sprite@2x.png") !default
+$sprite-sheet: $sprite-sheet-width $sprite-sheet-height $sprite-sheet-image $sprite-sheet-image-2x sprite !default
+
+=sprite-element()
+  background-image: $sprite-sheet-image
+  background-repeat: no-repeat
+  @media only screen and (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)
+    background-image: $sprite-sheet-image-2x
+    background-size: $sprite-sheet-width $sprite-sheet-height
+%sprite-element
+  +sprite-element()
+
+$sprite-icons-strategy-x: 0 !default
+$sprite-icons-strategy-y: 0 !default
+$sprite-icons-strategy-width: 29px !default
+$sprite-icons-strategy-height: 51px !default
+$sprite-icons-strategy: $sprite-icons-strategy-x $sprite-icons-strategy-y $sprite-icons-strategy-width $sprite-icons-strategy-height sprite-icons-strategy !default
+
+=sprite-icons-strategy-width()
+  width: $sprite-icons-strategy-width
+%sprite-icons-strategy-width
+  +sprite-icons-strategy-width()
+=sprite-icons-strategy-height()
+  height: $sprite-icons-strategy-height
+%sprite-icons-strategy-height
+  +sprite-icons-strategy-height()
+=sprite-icons-strategy-size()
+  +sprite-icons-strategy-width()
+  +sprite-icons-strategy-height()
+%sprite-icons-strategy-size
+  +sprite-icons-strategy-size()
+=sprite-icons-strategy-position()
+  background-position: $sprite-icons-strategy-x $sprite-icons-strategy-y
+%sprite-icons-strategy-position
+  +sprite-icons-strategy-position()
+=sprite-icons-strategy-adjust()
+  +sprite-icons-strategy-size()
+  +sprite-icons-strategy-position()
+%sprite-icons-strategy-adjust
+  +sprite-icons-strategy-adjust()
+=sprite-icons-strategy()
+  +sprite-icons-strategy-adjust()
+  @extend %sprite-element
+%sprite-icons-strategy
+  +sprite-icons-strategy()
+
+$sprite-icons-design-x: 0 !default
+$sprite-icons-design-y: -100px !default
+$sprite-icons-design-width: 78px !default
+$sprite-icons-design-height: 45px !default
+$sprite-icons-design: $sprite-icons-design-x $sprite-icons-design-y $sprite-icons-design-width $sprite-icons-design-height sprite-icons-design !default
+
+=sprite-icons-design-width()
+  width: $sprite-icons-design-width
+%sprite-icons-design-width
+  +sprite-icons-design-width()
+=sprite-icons-design-height()
+  height: $sprite-icons-design-height
+%sprite-icons-design-height
+  +sprite-icons-design-height()
+=sprite-icons-design-size()
+  +sprite-icons-design-width()
+  +sprite-icons-design-height()
+%sprite-icons-design-size
+  +sprite-icons-design-size()
+=sprite-icons-design-position()
+  background-position: $sprite-icons-design-x $sprite-icons-design-y
+%sprite-icons-design-position
+  +sprite-icons-design-position()
+=sprite-icons-design-adjust()
+  +sprite-icons-design-size()
+  +sprite-icons-design-position()
+%sprite-icons-design-adjust
+  +sprite-icons-design-adjust()
+=sprite-icons-design()
+  +sprite-icons-design-adjust()
+  @extend %sprite-element
+%sprite-icons-design
+  +sprite-icons-design()
+
+$sprite-icons-development-x: 0 !default
+$sprite-icons-development-y: -200px !default
+$sprite-icons-development-width: 51px !default
+$sprite-icons-development-height: 50px !default
+$sprite-icons-development: $sprite-icons-development-x $sprite-icons-development-y $sprite-icons-development-width $sprite-icons-development-height sprite-icons-development !default
+
+=sprite-icons-development-width()
+  width: $sprite-icons-development-width
+%sprite-icons-development-width
+  +sprite-icons-development-width()
+=sprite-icons-development-height()
+  height: $sprite-icons-development-height
+%sprite-icons-development-height
+  +sprite-icons-development-height()
+=sprite-icons-development-size()
+  +sprite-icons-development-width()
+  +sprite-icons-development-height()
+%sprite-icons-development-size
+  +sprite-icons-development-size()
+=sprite-icons-development-position()
+  background-position: $sprite-icons-development-x $sprite-icons-development-y
+%sprite-icons-development-position
+  +sprite-icons-development-position()
+=sprite-icons-development-adjust()
+  +sprite-icons-development-size()
+  +sprite-icons-development-position()
+%sprite-icons-development-adjust
+  +sprite-icons-development-adjust()
+=sprite-icons-development()
+  +sprite-icons-development-adjust()
+  @extend %sprite-element
+%sprite-icons-development
+  +sprite-icons-development()
+
+$sprite-icons-magicDevelop-x: -100px !default
+$sprite-icons-magicDevelop-y: 0 !default
+$sprite-icons-magicDevelop-width: 43px !default
+$sprite-icons-magicDevelop-height: 58px !default
+$sprite-icons-magicDevelop: $sprite-icons-magicDevelop-x $sprite-icons-magicDevelop-y $sprite-icons-magicDevelop-width $sprite-icons-magicDevelop-height sprite-icons-magicDevelop !default
+
+=sprite-icons-magicDevelop-width()
+  width: $sprite-icons-magicDevelop-width
+%sprite-icons-magicDevelop-width
+  +sprite-icons-magicDevelop-width()
+=sprite-icons-magicDevelop-height()
+  height: $sprite-icons-magicDevelop-height
+%sprite-icons-magicDevelop-height
+  +sprite-icons-magicDevelop-height()
+=sprite-icons-magicDevelop-size()
+  +sprite-icons-magicDevelop-width()
+  +sprite-icons-magicDevelop-height()
+%sprite-icons-magicDevelop-size
+  +sprite-icons-magicDevelop-size()
+=sprite-icons-magicDevelop-position()
+  background-position: $sprite-icons-magicDevelop-x $sprite-icons-magicDevelop-y
+%sprite-icons-magicDevelop-position
+  +sprite-icons-magicDevelop-position()
+=sprite-icons-magicDevelop-adjust()
+  +sprite-icons-magicDevelop-size()
+  +sprite-icons-magicDevelop-position()
+%sprite-icons-magicDevelop-adjust
+  +sprite-icons-magicDevelop-adjust()
+=sprite-icons-magicDevelop()
+  +sprite-icons-magicDevelop-adjust()
+  @extend %sprite-element
+%sprite-icons-magicDevelop
+  +sprite-icons-magicDevelop()
+
+$sprite-icons-magicDesign-x: -100px !default
+$sprite-icons-magicDesign-y: -100px !default
+$sprite-icons-magicDesign-width: 50px !default
+$sprite-icons-magicDesign-height: 53px !default
+$sprite-icons-magicDesign: $sprite-icons-magicDesign-x $sprite-icons-magicDesign-y $sprite-icons-magicDesign-width $sprite-icons-magicDesign-height sprite-icons-magicDesign !default
+
+=sprite-icons-magicDesign-width()
+  width: $sprite-icons-magicDesign-width
+%sprite-icons-magicDesign-width
+  +sprite-icons-magicDesign-width()
+=sprite-icons-magicDesign-height()
+  height: $sprite-icons-magicDesign-height
+%sprite-icons-magicDesign-height
+  +sprite-icons-magicDesign-height()
+=sprite-icons-magicDesign-size()
+  +sprite-icons-magicDesign-width()
+  +sprite-icons-magicDesign-height()
+%sprite-icons-magicDesign-size
+  +sprite-icons-magicDesign-size()
+=sprite-icons-magicDesign-position()
+  background-position: $sprite-icons-magicDesign-x $sprite-icons-magicDesign-y
+%sprite-icons-magicDesign-position
+  +sprite-icons-magicDesign-position()
+=sprite-icons-magicDesign-adjust()
+  +sprite-icons-magicDesign-size()
+  +sprite-icons-magicDesign-position()
+%sprite-icons-magicDesign-adjust
+  +sprite-icons-magicDesign-adjust()
+=sprite-icons-magicDesign()
+  +sprite-icons-magicDesign-adjust()
+  @extend %sprite-element
+%sprite-icons-magicDesign
+  +sprite-icons-magicDesign()
+

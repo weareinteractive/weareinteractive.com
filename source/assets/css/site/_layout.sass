@@ -1,69 +1,104 @@
+
 // --- header -------------------------------------------------------------------------------------
 
 #header
-  background: $black
-  border-bottom: 1px solid rgba(255, 255, 255, 0.13)
+  background: #111111
+  border-bottom: 1px solid #222222
 
   .container
     position: relative
 
   .navbar-header
-    height: 68px
+    height: 70px
 
     .navbar-brand
       float: left
-      font-size: 1.8rem
-      line-height: 55px
-      color: $color-primary
-      padding: 6px 0 0 10px
+      padding: 10px 0 0 0
+      color: $colorPrimary
+      
+    .logo
+      margin-left: 15px
+      
+      >.logo-icon
+        float: left
+        width: 48px
+        height: 48px
+  
+      >.logo-typo
+        float: left
+        margin-top: 15px
+        margin-left: 5px
+        font-size: $fontSizeLogo
 
-      &:hover
-        text-decoration: none
+        &:hover
+          text-decoration: none
 
     .navbar-toggle
       margin-top: 17px
-      background: $color-background
-      +border-radius($border-radius)
-      border: 1px solid $color-border
+      background: $colorBackground
+      +border-radius($borderRadius)
+      border: 1px solid $colorBorder
 
       >.icon-bar
         background: $colorFontDefault
 
   .navbar-collapse
     padding: 10px 0
-    background: $black
+    background: #111111
 
     .nav
       margin: 0
       padding: 0
       list-style-type: none
 
-      > li
+      li
         padding: 5px 0
         text-transform: uppercase
 
         a:hover, &.active a
           text-decoration: none
           .theme-1 &
-            color: $color-theme-1
+            color: $colorTheme1
           .theme-2 &
-            color: $color-theme-2
+            color: $colorTheme2
           .theme-3 &
-            color: $color-theme-3
+            color: $colorTheme3
           .theme-4 &
-            color: $color-theme-4
+            color: $colorTheme4
+  
+            
 
+          
+// --- main ---
 
-// --- background ---
-
-#background
-  top: 0
-  z-index: -1
+#main
   width: 100%
-  height: 100%
-  position: fixed
+
+  .wrapper
+    width: 100%
+    padding-top: 50px
+    padding-bottom: 100px
+    background: #191919
+    border-top: 1px solid #222222
+
+    &:nth-child(even)
+      background: #111111
+
+  .header
+    > .title
+      font-size: $fontSizeTitle
+
+    > .description
+      margin-bottom: 50px
+
+      
+
+  
+// --- home ---
+
+#home
   background-repeat: no-repeat
-  background-position: center 68px
+  background-position: center 0
 
   .theme-1 &
     background-image: url("/assets/img/theme/background-01.jpg")
@@ -74,142 +109,142 @@
   .theme-4 &
     background-image: url("/assets/img/theme/background-04.jpg")
 
-
-// --- main ---
-
-#main
-  width: 100%
-
-  .wrapper
-    width: 100%
-    padding-top: 10px
-    padding-bottom: 300px
-    border-top: 1px solid rgba(0, 0, 0, 0.3)
-
-    &:nth-child(even)
-      background: rgba(0, 0, 0, 0.2)
-      border-top: 1px solid rgba(0, 0, 0, 0.2)
-
   .header
-
     > .title
-      font-size: 2rem
+      margin-top: 100px
+      font-size: $fontSizeSuperBig
 
     > .description
-      margin-bottom: 50px
+      margin-top: 0
+      margin-bottom: 0
+      font-size: $fontSizeBig
+      
+  .services
+    margin-top: 150px
+    
+    .item
+      padding: 1px
+      //margin: 50px 0
+      
+      .service
+        padding: 50px
+        background: rgba(0, 0, 0, 0.5)
+        
+        .thumb
+          width: 150px
+          height: 150px
+          background: #fff
+          position: relative
+          display: inline-block
+    
+          > *
+            top: 50%
+            left: 50%
+            width: 80px
+            height: 80px
+            margin-top: -40px
+            margin-left: -40px
+    
+          > .thumb-strategy
+            +cssowl-sprite-absolute-inside($sprite-icons-strategy, middle, center)
+    
+          > .thumb-design
+            +cssowl-sprite-absolute-inside($sprite-icons-design, middle, center)
+    
+          > .thumb-development
+            +cssowl-sprite-absolute-inside($sprite-icons-development, middle, center)
+    
+        .title
+          margin-bottom: 20px
+          font-size: $fontSizeBig
+    
+        .listitem
+          padding: 0
+          margin: 0
+          line-height: 1.8em
+          list-style-type: none
 
 
-// --- home ---
-
-#home
-
-  &.wrapper
-    padding-top: 110px
-
-  .header
-
-    > .title
-      font-size: 2.5rem
-      line-height: 1.3em
-      margin-bottom: 50px
-
-    > .description
-      font-size: 1.5rem
-
+        
+    
 // --- portfolio ---
 
 #portfolio
+  
+  .projects
+    .item
+      padding: 1px
+  
+      > .project
+        background: #191919
+        height: 540px
+        overflow: hidden
+        position: relative
 
-  .item
-    margin-bottom: 50px
-
-    > .thumb
-      margin: 0 auto
-      position: relative
-      display: inline-block
-
-      > .award
-        top: -10px
-        right: 10px
-        position: absolute
-
-      > .meta
-        top: 0
-        left: 0
-        +opacity(0)
-        width: 100%
-        height: 100%
-        position: absolute
-        +transition-duration(0.3s)
-        +transition-property(opacity)
-        background: rgba(0, 0, 0, 0.8)
-
-        > .metadescription
-          width: 100%
-          bottom: 50px
+        > .award
+          top: 0
+          right: 20px
           position: absolute
-
-        > .link
-          left: 50%
-          width: 130px
-          bottom: 10px
-          margin-left: -65px
-          position: absolute
-          background: $color-primary
-          +border-radius(3px)
-
-      &:hover
+  
         > .meta
-          +opacity(1)
+          left: 0
+          top: 380px
+          width: 100%
+          position: absolute
+          +transition-property(top)
+          +transition-duration(0.4s)
+          background: rgba(25, 25, 25, 0.95)
 
-    > .title
-      margin-top: 20px
-      margin-bottom: 20px
-
-    > .description
-      height: 3em
-
-
-// --- services ---
-
-#services
-
-  .item
-    margin-bottom: 50px
-
-    > .thumb
-      width: 240px
-      height: 240px
-      position: relative
-      display: inline-block
-      background-image: $sprite
-      background-position: -10px -250px
-
-      > *
-        top: 50%
-        left: 50%
-        width: 80px
-        height: 80px
-        margin-top: -40px
-        margin-left: -40px
-        position: absolute
-        background-image: $sprite
-
-      > .thumb-concept
-        background-position: -86px -534px
-
-      > .thumb-design
-        background-position: -88px -632px
-
-      > .thumb-code
-        background-position: -86px -731px
-
-    > .title
-      margin-bottom: 20px
-
-    > .listitem
-      padding-left: 0
-      list-style-position: inside
+          > .title
+            font-size: $fontSizeBig
+            margin-top: 20px
+            margin-bottom: 20px
+            +transition-duration(0.4s)
+            +transition-property(margin-top)
+          
+          > .metadescription
+            padding: 30px
+            margin: 60px 90px 40px
+            border: 1px solid $linkColor
+            +transition-duration(0.4s)
+            +transition-property(margin-top)
+  
+          > .link
+            color: #fff
+            padding: 10px 20px
+            +border-radius(3px)
+            background: $linkColor
+            text-transform: uppercase
+            +transition-duration(0.3s)
+            +transition-property(background)
+              
+            &:hover
+              text-decoration: none
+              
+              .theme-1 &
+                background-color: $colorTheme1
+              .theme-2 &
+                background-color: $colorTheme2
+              .theme-3 &
+                background-color: $colorTheme3
+              .theme-4 &
+                background-color: $colorTheme4
+            
+          > .metaclient
+            margin-top: 20px
+  
+        &:hover
+          > .meta
+            top: 0
+            
+            > .title
+              margin-top: 100px
+              
+            > .metadescription
+              margin-top: 30px
+  
+              
+              
 
 // --- about ---
 
@@ -217,41 +252,32 @@
   .item
     margin-bottom: 50px
 
-    .thumb
-      width: 240px
-      height: 240px
-      position: relative
-      display: inline-block
-      background-image: $sprite
-      background-position: -10px -250px
+    .title
+      font-size: $fontSizeBig
 
-      > *
-        top: 50%
-        left: 50%
-        width: 80px
-        height: 80px
-        margin-top: -40px
-        margin-left: -40px
-        position: absolute
-        background-image: $sprite
-
-      > .thumb-kevin
-        background-position: 220px -530px
-
-      > .thumb-basti
-        background-position: 225px -630px
-
+      
+  
+  
 // --- contact ---
 
 #contact
+  &.wrapper
+    padding-bottom: 0
 
-  .gmaps
-    height: 280px
-
-  .address
-    margin-top: 20px
-    font-style: normal
-
+    .description
+      margin-bottom: 30px
+      
+    .address
+      font-style: normal
+      text-align: center
+      margin-bottom: 50px
+  
+#maps
+  height: 450px
+  
+  
+  
+  
 // --- footer ----
 
 #footer
@@ -265,17 +291,19 @@
       a
         color: $colorFontGrey
 
+        
+    
 // --- imprint ------------------------------------------------------------------------------------
 
 #imprint
   text-align: left
-  color: $black-light
+  color: $blackLight
 
   .title
     margin: 0
 
   .modal-content
-    +border-radius($border-radius)
+    +border-radius($borderRadius)
 
     strong
       color: $colorFontGrey
@@ -286,13 +314,16 @@
       .close
         height: auto
         padding: 0 10px 5px
-        +cssowl-position-absolute(20px, 20px)
+        //+cssowl-position-absolute(20px, 20px)
 
     > .modal-body
 
       p
         text-align: justify
 
+        
+          
+          
 // ---- media -------------------------------------------------------------------------------------
 
 @media (min-width: $screen-phone)
@@ -300,21 +331,16 @@
 @media (min-width: $screen-tablet)
 
   #header
-
-    .navbar-brand:before
-      content: ""
-      width: 55px
-      height: 55px
-      margin-bottom: -15px
-      display: inline-block
-      background-image: $sprite
-      background-position: -10px -10px
+    
+    .navbar-header
+      .logo
+        margin-left: 0
 
     .navbar-collapse
-      padding: 21px 0 13px
+      padding-top: 21px
 
       .nav li
-        margin-left: 15px
+        margin-left: 25px
 
 
   #contact

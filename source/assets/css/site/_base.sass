@@ -3,32 +3,42 @@
 html
   font-size: 100%
 
+  
 body
-  margin-top: 68px
+  margin-top: 70px
   text-align: center
-  color: $color-primary
-  background-color: $black-light
+  color: $colorPrimary
+  background: $blackLight
+  font-size: $fontSizeBase
+  line-height: $line-height-base
 
+
+a
+  outline: none
+  color: $linkColor
+  text-decoration: none
+  +transition-duration(0.3s)
+  +transition-property(color)
+  &:hover, &:active, &:focus
+    outline: none
+    color: $linkColor
+    text-decoration: none
+  &:focus
+    -moz-outline-style: none
+  &:hover
+    text-decoration: underline
+
+\:-moz-any-link:focus
+  outline: none
+
+                 
 h1, h2, h3, h4, h5, p
   font-weight: normal
   line-height: $line-height-base
 
-a
-  outline: none
-  color: $link-color
-  text-decoration: none
-  +transition-duration(0.2s)
-  +transition-property(color)
-
-  &:hover, &:active, &:focus
-    outline: none
-    color: $link-color
-    text-decoration: none
-  &:hover
-    text-decoration: underline
-
+  
 button
   border: none
   padding: 0 10px
   box-shadow: none
-  +border-radius($border-radius)
+  +border-radius($borderRadius)

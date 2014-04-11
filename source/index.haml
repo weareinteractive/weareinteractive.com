@@ -1,167 +1,181 @@
-%section#home.wrapper
+%section#home.wrapper{"data-0" => "background-position:center 0px", "data-1200" => "background-position:center 300px"}
   .container
     .row.header
-      %h1.title.col-md-12
+      %h1.title.col-md-12.col-lg-offset-1.col-lg-10
         Willkommen bei We Are Interactive!
-      %p.description.col-md-12
+      %p.col-md-12.col-lg-offset-1.col-lg-10.description
         In unserem Studio in München bieten wir Ihnen ein ganzheitliches Leistungsspektrum von Konzept über Design bis hin zur Programmierung innovativer und preisgekrönter Webseiten und Applikationen.
+
+    .row.services
+      .col-sm-4.item
+        .service
+          .thumb.img-circle
+            .thumb-strategy
+          %h3.title Strategie & Innovation
+          %ul.listitem                            
+            %li Zielgruppenanalyse
+            %li Informationsarchitektur
+            %li Web Konzeption
+            %li Online Game Konzeption 
+            %li Mobile App Konzeption
+
+      .col-sm-4.item
+        .service
+          .thumb.img-circle
+            .thumb-design
+          %h3.title Screendesign
+          %ul.listitem
+            %li Web Design
+            %li Mobile Design
+            %li Online Game Design
+            %li User Interface Design
+            %li Interaction Design
+
+      .col-sm-4.item
+        .service
+          .thumb.img-circle
+            .thumb-development
+          %h3.title Entwicklung
+          %ul.listitem
+            %li Web Development
+            %li Mobile Development
+            %li Online Game Development
+            %li CMS & Shop Development
+            %li Framework Development
 
 
 %section#portfolio.wrapper
   .container
     .row.header
-      %h2.col-md-12.title
-        Projekte
-      %p.col-md-10.col-md-offset-1.description
-        In den letzten 11 Jahren konnten wir durch eine enge Zusammenarbeit mit Agenturen für internationale Kunden aus verschiedensten Branchen - wie Bogner, Marc O'Polo, s.Oliver, Roeckl, BMW, FedEx und NBCUniversal - arbeiten. Die Resultate überzeugten nicht nur unsere Kunden, sondern auch die Fachjury namhafter Kreativwettbewerbe wie etwa des red dot oder Promax.
-        Hier ein Auszug aus unseren erfolgreichen Projekten in den Bereichen Screendesign und Web Development:
+      %h2.col-md-12.col-lg-offset-1.col-lg-10.title Projekte
+      %p.col-md-12.col-lg-offset-1.col-lg-10.description
+        In den letzten 12 Jahren konnten wir durch eine enge Zusammenarbeit mit Agenturen für internationale Kunden aus verschiedensten Branchen - wie Bogner, Marc O'Polo, s.Oliver, Roeckl, BMW, FedEx und NBCUniversal - arbeiten. Die Resultate überzeugten nicht nur unsere Kunden, sondern auch die Fachjury namhafter Kreativwettbewerbe wie etwa des red dot award oder Promax.
+        %br
+        Hier ein Auszug aus unseren erfolgreichen Projekten:
 
-    .row
-      .item.col-md-4.col-sm-6
-        .thumb
-          =image_tag "projects/bogner.jpg", :alt => "World of Bogner"
+    .row.projects
+          
+      .col-xs-12.col-sm-6.item
+        .project
           .meta
-            %p.metadescription
-              Fashion / Online-Shop
+            %h3.title Owl-Stars
+            %p.description
+              Konzept ∙ Screendesign ∙ Flash/Html-Programmierung            
+            .metadescription
+              Online-Shop
               %br
               Ausgezeichnet mit dem red dot
-              %br
-              %br
+            %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
+            %p.metaclient
               Umgesetzt für
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/odzala/odzala-preview.jpg", :alt => "", :class => "img-responsive"  
+          
+      .col-xs-12.col-sm-6.item
+        .project
+          .meta
+            %h3.title World of Bogner Mobile
+            %p.description
+              Konzept ∙ Screendesign ∙ Flash/Html-Programmierung            
+            .metadescription
+              Online-Shop
+              %br
+              Ausgezeichnet mit dem red dot
             %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
-          =image_tag "awards/reddot.gif", :alt => "reddot", :class => "award"
-        %h3.title World of Bogner
-        %p.description
-          Konzept, Screendesign,
-          %br
-          Flash/Html-Programmierung
-
-      .item.col-md-4.col-sm-6
-        .thumb
-          =image_tag "projects/angeln.jpg", :alt => "Angeln.de"
-          .meta
-            %p.metadescription
-              Special-Interest Medienhaus
-              %br
-              Community rund ums Angeln
-            %a.link{href: "http://www.angeln.de", target: "_blank", title: "Zur Angeln.de Webseite"} Zur Webseite
-        %h3.title Angeln.de
-        %p.description
-          Konzept, Screendesign,
-          %br
-          Frontend-Programmierung
-
-      .item.col-md-4.col-sm-6
-        .thumb
-          =image_tag "projects/vsyou.jpg", :alt => "vs.YOU"
-          .meta
-            %p.metadescription
-              Graffity, Cars  Toys
-              %br
-              Online-Shop / Blog
-            %a.link{href: "http://www.thevsyou.com/", target: "_blank", title: "Zur vs.YOU Webseite"} Zur Webseite
-        %h3.title vs.YOU
-        %p.description
-          Screendesign,
-          %br
-          Frontend/Backend-Programmierung
-
-      .item.col-md-4.col-sm-6
-        .thumb
-          =image_tag "projects/biography-channel.jpg", :alt => "The Biography Channel"
-          .meta
-            %p.metadescription
-              TV-Sender
-              %br
-              %br
+            %p.metaclient
               Umgesetzt für
-              %a{href: "http://www.janusmedia.de", target: "_blank"} Janusmedia
-            %a.link{href: "http://www.thebiographychannel.de/", target: "_blank", title: "Zur Biography Channel Webseite"} Zur Webseite
-        %h3.title The Biography Channel
-        %p.description Screendesign
-
-      .item.col-md-4.col-sm-6
-        .thumb
-          =image_tag "projects/roeckl.jpg", :alt => "Roeckl Sports"
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/odzala/odzala-preview.jpg", :alt => "", :class => "img-responsive"  
+            
+            
+            
+      .col-xs-12.col-sm-6.item
+        .project
+          .award
+            =image_tag "awards/reddot.gif", :alt => "red dot award"
           .meta
-            %p.metadescription
-              Sportspezialist
+            %h3.title World of Bogner
+            %p.description
+              Konzept ∙ Screendesign ∙ Flash/Html-Programmierung            
+            .metadescription
+              Online-Shop
               %br
-              %br
+              Ausgezeichnet mit dem red dot
+            %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
+            %p.metaclient
               Umgesetzt für
-              %a{href: "http://www.dpool.de", target: "_blank"} dpool
-            %a.link{href: "http://www.roeckl.de/", target: "_blank", title: "Zur Roeckl Sports Webseite"} Zur Webseite
-        %h3.title Roeckl Sports
-        %p.description Screendesign
-
-      .item.col-md-4.col-sm-6
-        .thumb
-          =image_tag "projects/ecircle.jpg", :alt => "eCircle"
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/bogner/bogner-preview.jpg", :alt => "", :class => "img-responsive"  
+          
+      .col-xs-12.col-sm-6.item
+        .project
           .meta
-            %p.metadescription
-              Technologieanbieter  Werbevermarkter
+            %h3.title NBC Universal
+            %p.description
+              Konzept ∙ Screendesign ∙ Flash/Html-Programmierung            
+            .metadescription
+              Online-Shop
               %br
-              %br
+              Ausgezeichnet mit dem red dot
+            %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
+            %p.metaclient
               Umgesetzt für
-              %a{href: "http://www.dpool.de", target: "_blank"} dpool
-            %a.link{href: "http://www.ecircle.com/de/home.html", target: "_blank", title: "Zur eCircle Webseite"} Zur Webseite
-        %h3.title eCircle
-        %p.description Screendesign
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/odzala/odzala-preview.jpg", :alt => "", :class => "img-responsive"  
 
-%section#services.wrapper
-  .container
-    .row.header
-      %h2.col-md-12.title Leistungen
 
-    .row
-      .item.col-md-4.col-sm-4
-        .thumb
-          .thumb-concept
-        %h3.title Strategie  Planung
-        %ul.listitem
-          %li Zielgruppenanalyse
-          %li Web, Game, App Konzeption
-          %li Informationsarchitektur
-          %li Wireframes
 
-      .item.col-md-4.col-sm-4
-        .thumb
-          .thumb-design
-        %h3.title Design
-        %ul.listitem
-          %li Web Design
-          %li Mobile Design
-          %li Game Design
-          %li Interaction Design
-
-      .item.col-md-4.col-sm-4
-        .thumb
-          .thumb-code
-        %h3.title Entwicklung
-        %ul.listitem
-          %li Mobile, Web Development
-          %li Flash, Flex, Air Development
-          %li CMS, Framework Development
-          %li Online Game Development
-
+      .col-xs-12.col-sm-6.item
+        .project
+          .meta
+            %h3.title Odzala
+            %p.description
+              Konzept ∙ Screendesign ∙ Flash/Html-Programmierung            
+            .metadescription
+              Online-Shop
+              %br
+              Ausgezeichnet mit dem red dot
+            %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/odzala/odzala-preview.jpg", :alt => "", :class => "img-responsive"  
+          
+      .col-xs-12.col-sm-6.item
+        .project
+          .meta
+            %h3.title Angeln.de
+            %p.description
+              Konzept ∙ Screendesign ∙ Flash/Html-Programmierung            
+            .metadescription
+              Online-Shop
+              %br
+              Ausgezeichnet mit dem red dot
+            %a.link{href: "http://www.bogner.com/", target: "_blank", title: "Zur World of Bogner Webseite"} Zur Webseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/odzala/odzala-preview.jpg", :alt => "", :class => "img-responsive"  
+          
+          
+      
+          
 
 %section#about.wrapper
   .container
     .row.header
-      %h2.col-md-12.title
-        Über uns
-      %p.col-md-12.description
+      %h2.col-md-12.col-lg-offset-1.col-lg-10.title Über uns
+      %p.col-md-12.col-lg-offset-1.col-lg-10.description
         In unserem Münchner Studio an der schönen Isar realisieren wir gestalterisch begeisternde, technisch innovative  und mehrfach ausgezeichnete 0nline- und Mobile-Projekte. Profitieren auch Sie von unserer langjährigen Erfahrung und Leidenschaft für alles Interaktive und buchen Sie uns flexibel auf Projektbasis.
 
     .row.item
-      .col-md-4.col-md-push-8.col-sm-4.col-sm-push-8
+      .col-sm-6.col-lg-offset-1.col-lg-5
         .thumb
-          .thumb-basti
-      .col-md-8.col-md-pull-4.col-sm-8.col-sm-pull-4
+          =image_tag "about/sp.jpg", :alt => "", :class => "img-circle"
+      .col-sm-6.col-lg-5
         %h3.title Sebastian Pollak
         %p.description
-          Seit über 12 Jahren im Geschäft. Konzeption / Screendesign / Web Development
+          Seit über 12 Jahren im Geschäft. Zuständig für Konzeption, Screendesign, UI/UX Design und Frontend Development. In der Freitzeit unterwegs als Snowboarder, Wakeboarder, Naturliebhaber und Münchner.
           %br
           %br
           %span
@@ -169,42 +183,39 @@
           %br
           %a{href: "mailto:sebastian@weareinteractive.com"} sebastian@weareinteractive.com
 
+
     .row.item
-      .col-md-4.col-sm-4
+      .col-sm-6.col-sm-push-6.col-lg-offset-1.col-lg-6.col-lg-push-6
         .thumb
-          .thumb-kevin
-      .col-md-8.col-sm-8
-        %h3.title Kevin Kim
+          =image_tag "about/kk.jpg", :alt => "", :class => "img-circle"
+      .col-sm-6.col-sm-pull-6.col-lg-5.col-lg-pull-5
+        %h3.title Kevin Franklin Kim
         %p.description
-          Über 8 Jahre Erfahrung.
-          Konzeption / Mobile, Web, Framework Development
+          Über 8 Jahre Erfahrung. Zuständig für Konzeption und Mobile, Web, Framework Development. In der Freitzeit unterwegs als Wellenreiter, Kiteboarder, Snowboarder, Basketballer, Meerliebhaber und Weltenbumler.
           %br
           %br
           %span
             %a{href: "tel:+498962286776"} T. +49 (0)89 - 62 28 67 76
           %br
           %a{href: "mailto:kevin@weareinteractive.com"} kevin@weareinteractive.com
+          
+          
 
 
 %section#contact.wrapper
   .container
     .row.header
-      %h2.col-md-12.title Kontakt
-      %p.col-md-12.description
+      %h2.col-md-12.col-lg-offset-1.col-lg-10.title Kontakt
+      %p.col-md-12.col-lg-offset-1.col-lg-10.description
         Sie denken gerade über ein spannendes Online-Projekt nach? Dann freuen wir uns auf Ihre Anfrage!
-    .row
-      .gmaps.col-md-8.col-md-push-4.col-sm-8.col-sm-push-4
-        #map_canvas{style: "width:100%; height:100%"}
-      %address.address.col-md-4.col-md-pull-8.col-sm-4.col-sm-pull-8
-        We Are Interactive
+      %address.col-md-12.col-lg-offset-1.col-lg-10.address
+        We Are Interactive, Zeppelinstr. 55, 81669 München
         %br
-        Zeppelinstr. 55
-        %br
-        81669 München
-        %br
-        %br
-        %span
-          %a{href: "tel:+498962286775"} T. +49 (0)89 - 62 28 67 75
-        %br
-        %span.mail
-          %a{href: "mailto:office@weareinteractive.de"} office@weareinteractive.de
+          %span
+            %a{href: "tel:+498962286775"} T. +49 (0)89 - 62 28 67 75
+          %br
+          %span.mail
+            %a{href: "mailto:office@weareinteractive.de"} office@weareinteractive.de
+        
+%section#maps.gmaps
+  #map_canvas{style: "width:100%; height:100%"}

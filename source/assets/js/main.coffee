@@ -5,6 +5,8 @@
 #= require sass-bootstrap/js/collapse
 #= require sass-bootstrap/js/modal
 
+#= require skrollr/src/skrollr
+
 $(document).ready ->
 
   theme = Math.floor(Math.random() * 4)
@@ -46,3 +48,11 @@ $(document).ready ->
     e.preventDefault()
     $('html, body').animate({scrollTop: $(@hash).offset().top - 55}, 300)
   )
+
+
+skrollr.init
+  forceHeight: false
+  smoothScrolling: false
+
+
+  
