@@ -7,27 +7,40 @@ html
 body
   margin-top: 70px
   text-align: center
-  color: $colorPrimary
-  background: $blackLight
-  font-size: $fontSizeBase
+  color: $colorFontDefault
+  background: $colorBlackLight
+  font-size: 14px
   line-height: $line-height-base
 
 
 a
   outline: none
-  color: $linkColor
   text-decoration: none
   +transition-duration(0.3s)
   +transition-property(color)
+  .theme-1 &
+    color: $colorTheme1
+  .theme-2 &
+    color: $colorTheme2
+  .theme-3 &
+    color: $colorTheme3
+  .theme-4 &
+    color: $colorTheme4
+  
+  
   &:hover, &:active, &:focus
     outline: none
-    color: $linkColor
+    color: $colorLink
+    
+    
     text-decoration: none
   &:focus
     -moz-outline-style: none
   &:hover
     text-decoration: underline
 
+
+      
 \:-moz-any-link:focus
   outline: none
 

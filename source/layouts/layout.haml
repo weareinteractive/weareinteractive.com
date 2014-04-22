@@ -8,8 +8,9 @@
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "width=device-width, initial-scale=1, user-scalable=no", :name => "viewport"}
     %title= data.site.name
-    %meta{:content => data.site.version, :name => "version"}
     %meta{:content => data.site.description, :name => "description"}
+    %meta{:content => data.site.keywords, :name => "keywords"}
+    %meta{:content => data.site.version, :name => "version"}
     %link{ rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
     %link{ rel: "apple-touch-icon-precomposed", sizes: "120x120", href: "apple-touch-icon-120x120-precomposed.png" }
     %link{ rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
@@ -19,7 +20,7 @@
     %link{ rel: "shortcut icon", href: "favicon.png" }
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Titillium+Web:400,300", "site"
+    = stylesheet_link_tag "site"
     = google_analytics_tag
 
   %body{:class => page_classes}
@@ -36,30 +37,46 @@
               %g
                 %path{d: "M24,0C10.746,0,0,10.746,0,24c0,13.254,10.746,24,24,24c13.255,0,24-10.746,24-24C48,10.746,37.255,0,24,0z\r\n\t\t M21.025,33.717l-3.408-15.643l-3.278,15.643h-3.8L6.468,14.282h2.153l3.595,17.455h0.504l3.785-17.183h2.243l3.867,17.183h0.531\r\n\t\tl3.486-17.455h2.152l-3.96,19.435H21.025z M35.771,33.718l-3.413-17.456h-0.526l-3.486,17.455h-2.152l3.959-19.435h3.801\r\n\t\tl3.97,19.435H35.771z M39.379,33.717l-4.07-19.435h2.152l4.071,19.435H39.379z", fill: "#FFFFFF"}
             .logo-typo We Are Interactive
-          
-          /=link_to "We Are Interactive", "#main", :class => "navbar-brand"
 
         %nav.collapse.navbar-collapse.navbar-right{role:"navigation"}
           %ul.nav.navbar-nav
             %li
-              =link_to "Home", "#main"
+              =link_to "Home", "#home"
             %li
               =link_to "Projekte", "#portfolio"
             %li
               =link_to "Über uns", "#about"
             %li
               =link_to "Kontakt", "#contact"
-             
 
-    #main{role:"main"}
+    #skrollr-body{role:"main"}
       = yield
 
       %footer#footer.wrapper
         .container
-          .row.content
+          .row
+            .social.col-md-12
+              %ul
+                %li
+                  %a{href: "http://www.facebook.com/MirSanInteractive", target: "_blank", class:"facebook"}
+                    .img-circle
+                      .icon Facebook
+                %li
+                  %a{href: "http://twitter.com/wereinteractive", target: "_blank", class:"twitter"}
+                    .img-circle
+                      .icon Twitter
+                %li
+                  %a{href: "http://www.flickr.com/photos/weareinteractive/sets/", target: "_blank", class:"flickr"}
+                    .img-circle
+                      .icon Flickr
+                %li
+                  %a{href: "http://www.behance.net/weareinteractive", target: "_blank", class:"behance"}
+                    .img-circle
+                      .icon Behance
+                  
+          .row
             .description.col-md-12
-              Copyright by We Are Interactive
-              ,
+              &copy; Copyright by We Are Interactive,
               =link_to "Impressum", "#imprint", :data => {:toggle => "modal"}
 
     = partial "partials/imprint"
