@@ -11,17 +11,16 @@
     %meta{:content => data.site.description, :name => "description"}
     %meta{:content => data.site.keywords, :name => "keywords"}
     %meta{:content => data.site.version, :name => "version"}
-    %link{ rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
-    %link{ rel: "apple-touch-icon-precomposed", sizes: "120x120", href: "apple-touch-icon-120x120-precomposed.png" }
-    %link{ rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
-    %link{ rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
-    %link{ rel: "apple-touch-icon-precomposed", sizes: "57x57", href: "apple-touch-icon-57x57-precomposed.png" }
-    %link{ rel: "apple-touch-icon-precomposed", href: "apple-touch-icon-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "152x152", href: "apple-touch-icon-152x152-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "144x144", href: "apple-touch-icon-144x144-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "114x114", href: "apple-touch-icon-114x114-precomposed.png" }
+    %link{ rel: "apple-touch-icon", sizes: "72x72", href: "apple-touch-icon-72x72-precomposed.png" }
+    %link{ rel: "apple-touch-icon", href: "apple-touch-icon-precomposed.png" }
     %link{ rel: "shortcut icon", href: "favicon.png" }
     %link{ rel: "icon", type: "image/ico", href: "favicon.ico" }
 
     = stylesheet_link_tag "site"
-    = google_analytics_tag
+    = google_analytics_universal_tag
 
   %body{:class => page_classes}
     %header#header.navbar.navbar-fixed-top{role:"banner"}
@@ -73,7 +72,7 @@
                   %a{href: "http://www.behance.net/weareinteractive", target: "_blank", class:"behance"}
                     .img-circle
                       .icon Behance
-                  
+
           .row
             .description.col-md-12
               &copy; Copyright by We Are Interactive,
