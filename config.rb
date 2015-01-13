@@ -50,14 +50,13 @@ configure :build do
 		],
 		:sitemap => "#{data.site.url}/sitemap.xml"
   # cache
-  activate :minify_css
+	activate :gzip
   activate :minify_html
   activate :cache_buster
-  activate :minify_javascript
+  activate :minify_css, inline: true
+  activate :minify_javascript, inline: true
   activate :imageoptim do |options|
 	  options.manifest = true
-    #options.pngout = false
-    #options.advpng = false
 	  options.skip_missing_workers = false
   end
   # favicon
@@ -96,5 +95,5 @@ activate :deploy do |deploy|
   deploy.clean  = true
   deploy.host   = "www.weareinteractive.com"
   deploy.path   = "/var/www/weareinteractive/htdocs"
-  deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r -e"
+	deploy.flags  = "-avz --chmod=Dg+s,ug+w,+r"
 end
