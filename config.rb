@@ -32,6 +32,13 @@ activate :google_analytics do |ga|
   ga.tracking_id = data.site.ga_account
 end
 
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+  config.cascade  = false
+  config.inline   = true
+  config.ignore   = ['hacks.css']
+end
+
 # Development-specific configuration
 configure :development do
 	activate :livereload

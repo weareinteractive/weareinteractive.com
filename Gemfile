@@ -1,15 +1,20 @@
-source 'http://rubygems.org'
+# If you do not have OpenSSL installed, update
+# the following line to use "http://" instead
+source 'https://rubygems.org'
 
 gem "middleman", "~> 3.3"
-gem "middleman-robots", "~> 1.0"
-gem "middleman-livereload", "~> 3.4"
-gem "middleman-google-analytics", "~> 1.1"
-gem "middleman-search_engine_sitemap", "~> 1.3"
+gem "middleman-robots"
+gem "middleman-imageoptim"
+gem "middleman-minify-html"
+gem 'middleman-autoprefixer'
+gem "middleman-favicon-maker"
+gem "middleman-google-analytics"
+gem "middleman-search_engine_sitemap"
 
-gem "middleman-deploy", "~> 1.0"
-gem "middleman-imageoptim", "~> 0.1"
-gem "middleman-minify-html", "~> 3.1"
-gem "middleman-favicon-maker", "~> 3.7"
+group :development do
+	gem "middleman-deploy"
+	gem "middleman-livereload"
+end
 
 # Speed up your JavaScript minification (and CoffeeScript builds)
 gem "therubyracer"
