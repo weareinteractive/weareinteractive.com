@@ -9,13 +9,14 @@ body
   text-align: center
   color: $colorFontDefault
   background: $colorBlackLight
-  font-size: 14px
+  font-size: 15px
   line-height: $line-height-base
 
 
 a
   outline: none
   text-decoration: none
+  color: $colorFontGrey
   +transition-duration(0.3s)
   +transition-property(color)
   .theme-1 &
@@ -31,14 +32,11 @@ a
   &:hover, &:active, &:focus
     outline: none
     color: $colorLink
-    
-    
     text-decoration: none
   &:focus
     -moz-outline-style: none
   &:hover
     text-decoration: underline
-
 
       
 \:-moz-any-link:focus
@@ -49,9 +47,19 @@ h1, h2, h3, h4, h5, p
   font-weight: normal
   line-height: $line-height-base
 
+b
+  font-weight: normal
+  
+i
+  font-style: normal
   
 button
   border: none
   padding: 0 10px
   box-shadow: none
   +border-radius($borderRadius)
+  
+input, select, button, textarea
+  box-sizing: border-box
+  &:focus
+    outline: none !important

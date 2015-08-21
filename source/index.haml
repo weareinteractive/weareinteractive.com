@@ -1,47 +1,49 @@
 %section#home.wrapper{"data-0" => "background-position:center 0px", "data-1200" => "background-position:center 600px"}
   .container
     .row.header
-      %h1.title.col-md-12.col-lg-offset-1.col-lg-10
-        Willkommen bei We Are Interactive!
-      %p.col-md-12.col-lg-offset-1.col-lg-10.description
-        In unserem Studio in München bieten wir Ihnen ein ganzheitliches Leistungsspektrum von Konzept über Design bis hin zur Programmierung innovativer und preisgekrönter Webseiten und Applikationen.
+      %h1.col-md-12.title.cd-headline.slide
+        %span Wir sind ein digitales Studio in München.
+        %span Bei uns entstehen innovative und preisgekrönte
+        %span.cd-words-wrapper
+          %b.is-visible Online-Kampagnen.
+          %b Online-Shops.
+          %b Online-Games.
+          %b Web-Applikationen.
+          %b Mobile-Applikationen.
 
     .row.services
       .col-sm-4.item
         .service
           .thumb.img-circle
             .thumb-strategy
-          %h3.title Strategie & Innovation
+          %h3.title Strategie
           %ul.listitem
-            %li Zielgruppenanalyse
-            %li Informationsarchitektur
+            %li Beratung & Workshops
             %li Web Konzeption
-            %li Online Game Konzeption
             %li Mobile App Konzeption
+            %li Online Game Konzeption 
 
       .col-sm-4.item
         .service
           .thumb.img-circle
             .thumb-design
-          %h3.title Screendesign
+          %h3.title Design
           %ul.listitem
             %li Web Design
             %li Mobile Design
             %li Online Game Design
             %li User Interface Design
-            %li Interaction Design
 
       .col-sm-4.item
         .service
           .thumb.img-circle
             .thumb-development
-          %h3.title Entwicklung
+          %h3.title Technologie
           %ul.listitem
             %li Web Development
             %li Mobile Development
             %li Online Game Development
-            %li CMS & Shop Development
-            %li Framework Development
+            %li CMS, Shop & Framework Development
 
 
 
@@ -50,38 +52,51 @@
     .row.header
       %h2.col-md-12.col-lg-offset-1.col-lg-10.title Projekte
       %p.col-md-12.col-lg-offset-1.col-lg-10.description
-        In den letzten 12 Jahren konnten wir durch eine enge Zusammenarbeit mit Agenturen für internationale Kunden aus verschiedensten Branchen - wie Bogner, Marc O'Polo, s.Oliver, Roeckl, BMW, FedEx und NBCUniversal - arbeiten. Die Resultate überzeugten nicht nur unsere Kunden, sondern auch die Fachjury namhafter Kreativwettbewerbe wie etwa des red dot award oder Promax.
-        %br
-        Hier ein Auszug aus unseren erfolgreichen Projekten:
+        In den letzten 14 Jahren konnten wir für viele Online- und Werbeagenturen Projekte aus verschiedensten Branchen für internationale Kunden - wie Bogner, Marc O'Polo, s.Oliver, Roeckl, BMW, Land Rover, SAP, FedEx, MSD, FOX, NBCUniversal und National Geographic Channel - realisieren. Die Resultate überzeugten nicht nur unsere Kunden, sondern auch die Fachjury namhafter Kreativwettbewerbe wie etwa des red dot award oder Promax.
 
-  .container.projects
+  .container.fullcontainer.projects
     .row
-      .col-xs-12.col-sm-6.col-md-6.item
-        .project.owlstars
-          .meta
-            %h3.title Owl-Stars
-            %p.description
-              Konzept ∙ Screendesign ∙ Web Development ∙ Photoshop extension Development
-            %a.link{href: "http://www.owl-stars.com/", target: "_blank", title: "Zur Owl-Stars Website"} Zur Webseite
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.wejustdostuff.com", target: "_blank"} We Just Do Stuff
-          =image_tag "projects/owl-stars/owl-stars-preview.png", :alt => "Owl-Stars", :class => "img-responsive"
 
-      .col-xs-12.col-sm-6.col-md-6.item
-        .project.bognermobile
+
+      .col-xs-12.col-sm-6.col-md-6.item      
+        .project
           .meta
-            %h3.title World of Bogner Mobile
+            %h3.title Oui Online Shop
             %p.description
-              Konzept ∙ Screendesign ∙ Mobile Development ∙ CMS Development
-            %a.link{href: "http://m.bogner.com/de/", target: "_blank", title: "Zur World of Bogner Mobileseite"} Zur Webseite
+              Web Development ∙ Shop Development ∙ CMS Development
+            %a.link{href: "http://www.oui.com", target: "_blank", title: "Zum Shop"} Zur Webseite
             %p.metaclient
               Umgesetzt für
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
-          =image_tag "projects/bogner-mobile/bogner-mobile-preview.png", :alt => "World of Bogner Mobile", :class => "img-responsive"
+          =image_tag "projects/oui/oui-preview.png", :alt => "Oui Online Shop", :class => "img-responsive"
 
-      .col-xs-12.col-sm-6.col-md-6.item
-        .project.bogner
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title die 2000er & du
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development
+            %a.link{href: "http://2000er.natgeo-special.de", target: "_blank", title: "die 2000er & du"} Zur Microsite
+            %p.metaclient
+          =image_tag "projects/2000er-natgeo/2000er-natgeo-preview.png", :alt => "die 2000er & du", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title Torwandschiessen
+            %p.description
+              Konzept ∙ Screendesign ∙ Game Development
+            .link-offline Nicht mehr Online
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/cv-torwand/cv-torwand-preview.png", :alt => "Torwandschiessen", :class => "img-responsive"
+
+
+    
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
           .award
             =image_tag "awards/reddot.gif", :alt => "red dot award"
           .meta
@@ -94,8 +109,92 @@
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
           =image_tag "projects/bogner/bogner-preview.png", :alt => "World of Bogner", :class => "img-responsive"
 
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title World of Bogner Mobile
+            %p.description
+              Konzept ∙ Screendesign ∙ Mobile Development ∙ CMS Development
+            %a.link{href: "http://m.bogner.com/de/", target: "_blank", title: "Zur World of Bogner Mobileseite"} Zur Mobileseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
+          =image_tag "projects/bogner-mobile/bogner-mobile-preview.png", :alt => "World of Bogner Mobile", :class => "img-responsive"
+
       .col-xs-12.col-sm-6.col-md-6.item
-        .project.nbcu
+        .project
+          .meta
+            %h3.title Jean Cloud Game
+            %p.description
+              Konzept ∙ Screendesign ∙ Game Development
+            .link-offline Nicht mehr Online
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.tm-people.de", target: "_blank"} technology marketing people
+          =image_tag "projects/jean-cloud/jean-cloud-preview.png", :alt => "Jean Cloud Game", :class => "img-responsive"  
+
+
+
+
+      .col-xs-12.col-sm-6.col-md-6.item
+        .project
+          .meta
+            %h3.title Owl-Stars
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development ∙ Photoshop extension Development
+            %a.link{href: "http://www.owl-stars.com/", target: "_blank", title: "Zur Owl-Stars Website"} Zur Webseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.wejustdostuff.com", target: "_blank"} We Just Do Stuff
+          =image_tag "projects/owl-stars/owl-stars-preview.png", :alt => "Owl-Stars", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title Angeln.de
+            %p.description
+              Konzept ∙ Screendesign ∙ Frontend Development
+            %a.link{href: "http://www.angeln.de", target: "_blank", title: "Zur Anglen.de Webseite"} Zur Webseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.woont-solutions.com", target: "_blank"} Woont Solutions
+          =image_tag "projects/angeln/angeln-preview.png", :alt => "Angeln.de", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title Braun Classics
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development
+            %a.link{href: "http://www.braun-classics.de", target: "_blank", title: "Zur Braun-Classics Website"} Zur Webseite
+          =image_tag "projects/braun-classics/braun-classics-preview.png", :alt => "Braun Classics", :class => "img-responsive"
+
+
+
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title Odzala
+            %p.description
+              Konzept ∙ Screendesign
+            %a.link{href: "http://www.odzala.com", target: "_blank", title: "Zur Odzala Website"} Zur Webseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.dpool.com", target: "_blank"} dpool
+          =image_tag "projects/odzala/odzala-preview.png", :alt => "Odzala", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title episode eleven
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development ∙ CMS Development
+            %a.link{href: "http://www.episode-eleven.de", target: "_blank", title: "Zur Episode eleven Webseite"} Zur Webseite
+          =image_tag "projects/episode-eleven/episode-eleven-preview.png", :alt => "", :class => "img-responsive" 
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
           .award
             =image_tag "awards/promaxbda.gif", :alt => "Promaxbda"
           .meta
@@ -108,62 +207,8 @@
               %a{href: "http://www.dpool.com", target: "_blank"} dpool
           =image_tag "projects/nbcu/nbcu-preview.png", :alt => "NBC Universal", :class => "img-responsive"
 
-      .col-xs-12.col-sm-6.col-md-4.item
-        .project.e11
-          .meta
-            %h3.title episode eleven
-            %p.description
-              Konzept ∙ Screendesign ∙ Web Development ∙ CMS Development
-            %a.link{href: "http://www.episode-eleven.de", target: "_blank", title: "Zur Episode eleven Webseite"} Zur Webseite
-          =image_tag "projects/episode-eleven/episode-eleven-preview.png", :alt => "episode eleven", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-4.item
-        .project.angeln
-          .meta
-            %h3.title Angeln.de
-            %p.description
-              Konzept ∙ Screendesign ∙ Frontend Development
-            %a.link{href: "http://www.angeln.de", target: "_blank", title: "Zur Anglen.de Webseite"} Zur Webseite
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.woont-solutions.com", target: "_blank"} Woont Solutions
-          =image_tag "projects/angeln/angeln-preview.png", :alt => "Angeln.de", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-4.item
-        .project.braunclassics
-          .meta
-            %h3.title Braun Classics
-            %p.description
-              Konzept ∙ Screendesign ∙ Web Development
-            %a.link{href: "http://www.braun-classics.de", target: "_blank", title: "Zur Braun-Classics Website"} Zur Webseite
-          =image_tag "projects/braun-classics/braun-classics-preview.png", :alt => "Braun Classics", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-4.item
-        .project.odzala
-          .meta
-            %h3.title Odzala
-            %p.description
-              Konzept ∙ Screendesign
-            %a.link{href: "http://www.odzala.com", target: "_blank", title: "Zur Odzala Website"} Zur Webseite
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.dpool.com", target: "_blank"} dpool
-          =image_tag "projects/odzala/odzala-preview.png", :alt => "Odzala", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-4.item
-        .project.syfyvl
-          .meta
-            %h3.title Syfy Vampire League
-            %p.description
-              Konzept ∙ Screendesign ∙ Game Development
-            .link-offline Nicht mehr Online
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
-          =image_tag "projects/syfy-vl/syfy-vl-preview.png", :alt => "Syfy Vampire League", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-4.item
-        .project.syfymc
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
           .award
             =image_tag "awards/promaxbda.gif", :alt => "Promaxbda"
           .meta
@@ -175,7 +220,8 @@
               Umgesetzt für
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
           =image_tag "projects/syfy-mc/syfy-mc-preview.png", :alt => "Syfy Mystery Challenge", :class => "img-responsive"
-
+          
+          
 
 
 %section#about.wrapper
@@ -183,17 +229,39 @@
     .row.header
       %h2.col-md-12.col-lg-offset-1.col-lg-10.title Über uns
       %p.col-md-12.col-lg-offset-1.col-lg-10.description
-        In unserem Münchner Studio an der schönen Isar realisieren wir gestalterisch begeisternde, technisch innovative  und mehrfach ausgezeichnete 0nline- und Mobile-Projekte. Profitieren auch Sie von unserer langjährigen Erfahrung und Leidenschaft für alles Interaktive und buchen Sie uns flexibel auf Projektbasis.
+        In unserem Münchner Studio an der schönen Isar realisieren wir gestalterisch begeisternde, technisch innovative  und mehrfach ausgezeichnete 0nline- und Mobile-Projekte. Profitiere von unserer langjährigen Erfahrung und Leidenschaft für alles Interaktive und buch uns flexibel auf Projektbasis.
 
     .row.item
-      .col-sm-6.col-lg-offset-1.col-lg-5
+      .col-xs-6.col-sm-3.info
+        .color
+          .bigger 10
+          .big +
+        Jahre Zusammenarbeit
+      .col-xs-6.col-sm-3.info
+        .color
+          .bigger 5
+          .big +
+        Jahre gemeinsames Studio
+      .col-xs-6.col-sm-3.info
+        .color
+          .bigger 100
+          .big +
+        abgeschlossene Projekte
+      .col-xs-6.col-sm-3.info
+        .color
+          .bigger 10
+          .big m
+        vom Studio an die Isar
+
+
+
+    .row.item
+      .col-sm-4.col-sm-offset-1
         .thumb
           =image_tag "about/sp.jpg", :alt => "Sebastian Pollak", :class => "img-circle"
-      .col-sm-6.col-lg-5
         %h3.title Sebastian Pollak
         %p.description
-          Seit über 12 Jahren im Geschäft. Zuständig für Konzeption, Screendesign, UI/UX Design und Frontend Development.
-          //In der Freitzeit unterwegs als Snowboarder, Wakeboarder, Naturliebhaber und Reisender.
+          Seit über 14 Jahren im Geschäft. Zuständig für Konzeption, Screendesign, UI/UX Design und Frontend Development.
           %br
           %br
           %span
@@ -201,15 +269,12 @@
           %br
           %a{href: "mailto:sebastian@weareinteractive.com"} sebastian@weareinteractive.com
 
-    .row.item
-      .col-sm-6.col-sm-push-6.col-lg-offset-1.col-lg-6.col-lg-push-6
+      .col-sm-4.col-sm-offset-2
         .thumb
           =image_tag "about/kk.jpg", :alt => "Kevin Franklin Kim", :class => "img-circle"
-      .col-sm-6.col-sm-pull-6.col-lg-5.col-lg-pull-5
         %h3.title Kevin Franklin Kim
         %p.description
-          Über 8 Jahre Erfahrung. Zuständig für Konzeption und Mobile, Web, Framework, CMS, Shop und Frontend Development.
-          //In der Freitzeit unterwegs als Wellenreiter, Kiteboarder, Snowboarder, Basketballer, Meerliebhaber und Weltenbumler.
+          Über 10 Jahre Erfahrung. Zuständig für Konzeption und Mobile, Web, Framework, CMS, Shop und Frontend Development.
           %br
           %br
           %span
@@ -217,14 +282,12 @@
           %br
           %a{href: "mailto:kevin@weareinteractive.com"} kevin@weareinteractive.com
 
-
-
 %section#contact.wrapper
   .container
     .row.header
       %h2.col-md-12.col-lg-offset-1.col-lg-10.title Kontakt
       %p.col-md-12.col-lg-offset-1.col-lg-10.description
-        Sie denken gerade über ein spannendes Online-Projekt nach? Dann freuen wir uns auf Ihre Anfrage!
+        Du bist eine Online- oder Werbeagentur, ein Startup oder ein weiterer Freelancer und denkst gerade über ein spannendes interaktives Projekt nach? Dann freuen wir uns von dir zu hören!
       %address.col-md-12.col-lg-offset-1.col-lg-10.address
         We Are Interactive, Zeppelinstr. 55, 81669 München
         %br
@@ -235,5 +298,5 @@
             %a{href: "mailto:office@weareinteractive.de"} office@weareinteractive.de
 
 
-%section#maps.gmaps
-  #map_canvas{style: "width:100%; height:100%"}
+  #maps.container.fullcontainer.gmaps
+    #map_canvas{style: "width:100%; height:100%"}

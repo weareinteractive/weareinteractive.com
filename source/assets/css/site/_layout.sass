@@ -96,7 +96,7 @@
       line-height: 1.2em
 
     > .description
-      margin-bottom: 50px
+      margin-bottom: 70px 
 
       
 
@@ -120,15 +120,25 @@
   .header
     > .title
       margin-top: 100px
-      font-size: $fontSizeSuperBig
-
-    > .description
-      margin-top: 0
-      margin-bottom: 0
-      font-size: $fontSizeBig
+      font-size: 2em
+      
+      span
+        display: inline
+        line-height: 1.3em
+        @include text-shadow(0px, 0px, 20px, rgba(0,0,0,0.5))
+        
+        &.cd-words-wrapper
+          .theme-1 &
+            color: $colorTheme1
+          .theme-2 &
+            color: $colorTheme2
+          .theme-3 &
+            color: $colorTheme3
+          .theme-4 &
+            color: $colorTheme4
       
   .services
-    margin-top: 150px
+    margin-top: 200px
     
     .item
       padding: 1px
@@ -156,10 +166,10 @@
             +cssowl-sprite-absolute-inside($sprite-icons-strategy, middle, center)
     
           > .thumb-design
-            +cssowl-sprite-absolute-inside($sprite-icons-design, middle, center)
+            +cssowl-sprite-absolute-inside($sprite-icons-magicDesign, middle, center)
     
           > .thumb-development
-            +cssowl-sprite-absolute-inside($sprite-icons-development, middle, center)
+            +cssowl-sprite-absolute-inside($sprite-icons-magicDevelop, middle, center)
     
         .title
           margin-bottom: 20px
@@ -168,7 +178,7 @@
         .listitem
           padding: 0
           margin: 0
-          line-height: 1.8em
+          line-height: 2em
           list-style-type: none
 
 
@@ -189,96 +199,111 @@
   
   .item
     padding: 1px
-
-    > .project
-      background: $colorBlack
-      overflow: hidden
-      position: relative
-      text-align: center
-
-      > .award
-        top: 0
-        right: 0
-        position: absolute
-        width: 55px
-        img
-          width: 100%
-          height: 100%
-        
-      > img
-        display: inline
-        
-      > .meta
-        left: 0
-        top: 450px
-        width: 100%
+    
+    &.col-md-3, &.col-md-6
+      > .project
         height: 500px
-        padding: 0 20px
-        position: absolute
-        +transition-property(top)
-        +transition-property(background)
-        +transition-duration(0.4s)
-
-        > .title
-          font-size: $fontSizeBig
-          margin-top: 0
-          margin-bottom: 0
-          +transition-duration(0.4s)
-          +transition-property(margin-top)
-          
-        > .description
-          margin-top: 5px
-          margin-bottom: 80px
-
-        > .link
-          color: #fff
-          padding: 10px 20px
-          +border-radius(3px)
-          text-transform: uppercase
-          +transition-duration(0.3s)
-          +transition-property(background)
-          .theme-1 &
-            background-color: $colorTheme1
-          .theme-2 &
-            background-color: $colorTheme2
-          .theme-3 &
-            background-color: $colorTheme3
-          .theme-4 &
-            background-color: $colorTheme4          
-            
-          &:hover
-            text-decoration: none
-            background: $colorLink            
-          
-        > .link-offline
-          display: inline-block
-          color: #fff
-          padding: 10px 20px
-          +border-radius(3px)
-          text-transform: uppercase
-          background: $colorLink
-            
-
-          
-        > .metaclient
-          margin-top: 25px
-          color: $colorFontGrey
-          
-      .img-responsive
-        margin-top: 10px
-        margin-bottom: 40px
-
-      &:hover
-        > .meta
+        background: $colorBlack
+        overflow: hidden
+        position: relative
+        text-align: center
+  
+        > .award
           top: 0
-          background: rgba(17, 17, 17, 0.96)
+          right: 0
+          position: absolute
+          width: 55px
+          img
+            width: 100%
+            height: 100%
           
+        > img
+          display: inline
+          z-index: 1
+          position: relative
+          top: 40%
+          @include transform(translateY(-40%))
+          
+        > .meta
+          left: 0
+          top: 82%
+          width: 100%
+          height: 500px
+          padding: 0 20px
+          position: absolute
+          z-index: 2
+          +transition-property(top)
+          +transition-property(background)
+          +transition-duration(0.4s)
+  
           > .title
-            margin-top: 10%
+            position: relative
+            font-size: $fontSizeBig
+            margin-top: 0
+            margin-bottom: 0
+            +transition-duration(0.4s)
+            +transition-property(margin-top)
             
           > .description
+            display: none
             margin-top: 0
             margin-bottom: 20px
+  
+          > .link
+            display: none
+            color: #fff
+            padding: 10px 20px
+            +border-radius(3px)
+            text-transform: uppercase
+            +transition-duration(0.3s)
+            +transition-property(background)
+            .theme-1 &
+              background-color: $colorTheme1
+            .theme-2 &
+              background-color: $colorTheme2
+            .theme-3 &
+              background-color: $colorTheme3
+            .theme-4 &
+              background-color: $colorTheme4          
+              
+            &:hover
+              text-decoration: none
+              background: $colorLink            
+            
+          > .link-offline
+            display: none
+            color: #fff
+            padding: 10px 20px
+            +border-radius(3px)
+            text-transform: uppercase
+            background: $colorLink
+              
+  
+            
+          > .metaclient
+            display: none
+            margin-top: 25px
+            color: $colorFontGrey
+            
+        .img-responsive
+          margin-top: 10px
+          margin-bottom: 40px
+  
+        &:hover
+          > .meta
+            top: 0
+            background: rgba(17, 17, 17, 0.96)
+            
+            > .title
+              margin-top: 25%
+            
+            > .description, > .metaclient
+              display: block
+  
+            > .link, > .link-offline
+              display: inline-block
+          
+    
     
               
               
@@ -293,6 +318,29 @@
 
     .title
       font-size: $fontSizeBig
+    
+    .info
+      margin-bottom: 30px
+      
+      .color
+        margin: 0 0 20px
+        
+        .theme-1 &
+          color: $colorTheme1
+        .theme-2 &
+          color: $colorTheme2
+        .theme-3 &
+          color: $colorTheme3
+        .theme-4 &
+          color: $colorTheme4
+      
+      .bigger
+        display: inline
+        font-size: $fontSizeSuperBig
+        
+      .big
+        display: inline
+        font-size: $fontSizeBig
 
       
   
@@ -311,10 +359,8 @@
     background: $colorThemeDark4
   
   &.wrapper
-    padding-bottom: 0
-
     .description
-      margin-bottom: 30px
+      //margin-bottom: 30px
       
     .address
       font-style: normal
@@ -358,11 +404,6 @@
           &.twitter .icon
             +cssowl-sprite-absolute-inside($sprite-icons-twitter, middle, center)
             
-          &.flickr .icon
-            +cssowl-sprite-absolute-inside($sprite-icons-flickr, middle, center)
-            
-          &.behance .icon
-            +cssowl-sprite-absolute-inside($sprite-icons-behance, middle, center)
         
             
   .description
@@ -418,6 +459,10 @@
   
   body
     font-size: $fontSizeBase
+    
+  .fullcontainer
+    padding: 0 $grid-gutter-width
+    width: 100%
 
   #header
     .navbar-header
@@ -438,29 +483,18 @@
           padding: 5px 0
         
   #home
+    .header
+      > .title
+        margin-top: 160px
+        font-size: $fontSizeSuperBig
+        span
+          line-height: 1.4em
+    
     .services
       .item
         .service
           height: 540px
           
-  #portfolio
-    .item
-      > .project
-        height: 400px
-        > .meta
-          top: 260px
-          
-          > .description
-            margin-bottom: 80px
-            
-        &:hover
-          > .meta
-            > .title
-              margin-top: 100px
-            
-            > .description
-              margin-top: 10px
-              margin-bottom: 40px
 
 
         
@@ -475,21 +509,52 @@
   #portfolio
     .col-md-6
       > .project
-        height: 500px
-
         > .award
           width: 85px
-
-        > .meta
-          top: 370px
 
         .img-responsive
           margin-top: 0
           margin-bottom: 0
 
-        &:hover
-          > .meta
-            > .title
-              margin-top: 140px
+    .item
+      &.col-md-3
+        > .project
+          &:hover
+            > .meta
+              > .title
+                margin-top: 53%
+          
+          
       
-              
+      
+
+@media (min-width: $screen-lg-desktop)
+
+  .fullcontainer
+    padding: 0 $grid-gutter-width*2
+    width: 100%
+    max-width: 2000px
+  
+  #home
+    .header
+      > .title
+        span
+          display: inline-block
+          
+
+@media (min-width: 1700px)
+  #portfolio
+    .item
+      &.col-md-6
+        > .project
+          &:hover
+            > .meta
+              > .title
+                margin-top: 16%
+    
+      &.col-md-3
+        > .project
+          &:hover
+            > .meta
+              > .title
+                margin-top: 33%

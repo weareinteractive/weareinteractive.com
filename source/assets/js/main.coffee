@@ -12,27 +12,61 @@ skrollr.init
 
 $(document).ready ->
 
+  # --- theme color ---
+  
   theme = Math.floor(Math.random() * 4)
   themeColors = ['#ae2c3c', '#569dd4', '#95a13b', '#e4980b']
-
-  # --- theme  ---
   $('body').addClass('theme-' + (theme + 1))
 
 
-  # --- scrollspy  ---
-
+  
+  # --- scrollspy ---
+  
   $('body').scrollspy({ target: '#header', offset: 70 })
   $("#header nav a[href^='#']").on('click', (e) ->
     e.preventDefault()
     $('html, body').animate({scrollTop: $(@hash).offset().top - 69}, 600)
   )
+
+  
+
+  # --- headline animation ---
+  
+  animationDelay = 3000
+  
+  initHeadline = ->
+    animateHeadline $(".cd-headline")
+  
+  animateHeadline = ($headlines) ->
+    $headlines.each ->
+      headline = $(this)
+      setTimeout (->
+        hideWord headline.find(".is-visible").eq(0)
+      ), animationDelay
+
+  hideWord = ($word) ->
+    nextWord = takeNext($word)
+    switchWord $word, nextWord
+    setTimeout (->
+      hideWord nextWord
+    ), animationDelay
+
+  takeNext = ($word) ->
+    (if (not $word.is(":last-child")) then $word.next() else $word.parent().children().eq(0))
+    
+  switchWord = ($oldWord, $newWord) ->
+    $oldWord.removeClass("is-visible").addClass "is-hidden"
+    $newWord.removeClass("is-hidden").addClass "is-visible"
+    
+  initHeadline()
+
+  
   
   # --- google maps ---
-
-
+  
   latlng = new google.maps.LatLng(48.12882, 11.584729)
   myOptions =
-    zoom: 16
+    zoom: 17
     center: latlng
     scrollwheel: false
     mapTypeId: google.maps.MapTypeId.ROADMAP
