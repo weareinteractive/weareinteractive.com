@@ -64,7 +64,7 @@ $(document).ready ->
   
   # --- google maps ---
   
-  latlng = new google.maps.LatLng(48.12882, 11.584729)
+  latlng = new google.maps.LatLng(48.12497159999999,11.589735700000006)
   myOptions =
     zoom: 17
     center: latlng
