@@ -59,6 +59,16 @@
       .col-xs-12.col-sm-6.col-md-6.item      
         .project
           .meta
+            %h3.title Geschenkling
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development
+            %a.link{href: "http://www.geschenkling.de", target: "_blank", title: "Geschenkling"} Zur Webseite
+            %p.metaclient
+          =image_tag "projects/geschenkling/geschenkling-preview.png", :alt => "Geschenkling", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
             %h3.title dieNordwand
             %p.description
               Konzept ∙ Screendesign ∙ Web Development
@@ -69,12 +79,13 @@
       .col-xs-12.col-sm-6.col-md-3.item
         .project
           .meta
-            %h3.title die 2000er & du
+            %h3.title Yatego Local
             %p.description
-              Konzept ∙ Screendesign ∙ Web Development
-            %a.link{href: "http://2000er.natgeo-special.de", target: "_blank", title: "die 2000er & du"} Zur Microsite
+              Konzept ∙ Screendesign
+            %a.link{href: "http://www.yategolocal.com", target: "_blank", title: "Yatego Local"} Zur Webseite
             %p.metaclient
-          =image_tag "projects/2000er-natgeo/2000er-natgeo-preview.png", :alt => "die 2000er & du", :class => "img-responsive"
+          =image_tag "projects/yategolocal/yategolocal-preview.png", :alt => "Yatego Local", :class => "img-responsive"
+
 
       .col-xs-12.col-sm-6.col-md-3.item
         .project
@@ -87,6 +98,44 @@
               Umgesetzt für
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
           =image_tag "projects/cv-torwand/cv-torwand-preview.png", :alt => "Torwandschießen", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-3.item
+        .project
+          .meta
+            %h3.title
+              National Geographic Channel
+              %br
+              die 2000er & du
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development
+            .link-offline Nicht mehr Online
+            %p.metaclient
+          =image_tag "projects/2000er-natgeo/2000er-natgeo-preview.png", :alt => "die 2000er & du", :class => "img-responsive"
+
+      .col-xs-12.col-sm-6.col-md-6.item
+        .project
+          .meta
+            %h3.title Jean Cloud Game
+            %p.description
+              Konzept ∙ Screendesign ∙ Game Development
+            .link-offline Nicht mehr Online
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.tm-people.de", target: "_blank"} technology marketing people
+          =image_tag "projects/jean-cloud/jean-cloud-preview.png", :alt => "Jean Cloud Game", :class => "img-responsive"  
+
+
+      .col-xs-12.col-sm-6.col-md-6.item
+        .project
+          .meta
+            %h3.title Owl-Stars
+            %p.description
+              Konzept ∙ Screendesign ∙ Web Development ∙ Photoshop extension Development
+            %a.link{href: "http://www.owl-stars.com/", target: "_blank", title: "Zur Owl-Stars Website"} Zur Webseite
+            %p.metaclient
+              Umgesetzt für
+              %a{href: "http://www.wejustdostuff.com", target: "_blank"} We Just Do Stuff
+          =image_tag "projects/owl-stars/owl-stars-preview.png", :alt => "Owl-Stars", :class => "img-responsive"
 
       .col-xs-12.col-sm-6.col-md-3.item
         .project
@@ -112,41 +161,6 @@
               %a{href: "http://www.bestbytes.com", target: "_blank"} bestbytes
           =image_tag "projects/bogner-mobile/bogner-mobile-preview.png", :alt => "World of Bogner Mobile", :class => "img-responsive"
 
-      .col-xs-12.col-sm-6.col-md-6.item
-        .project
-          .meta
-            %h3.title Jean Cloud Game
-            %p.description
-              Konzept ∙ Screendesign ∙ Game Development
-            .link-offline Nicht mehr Online
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.tm-people.de", target: "_blank"} technology marketing people
-          =image_tag "projects/jean-cloud/jean-cloud-preview.png", :alt => "Jean Cloud Game", :class => "img-responsive"  
-
-      .col-xs-12.col-sm-6.col-md-6.item
-        .project
-          .meta
-            %h3.title Owl-Stars
-            %p.description
-              Konzept ∙ Screendesign ∙ Web Development ∙ Photoshop extension Development
-            %a.link{href: "http://www.owl-stars.com/", target: "_blank", title: "Zur Owl-Stars Website"} Zur Webseite
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.wejustdostuff.com", target: "_blank"} We Just Do Stuff
-          =image_tag "projects/owl-stars/owl-stars-preview.png", :alt => "Owl-Stars", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-3.item
-        .project
-          .meta
-            %h3.title Angeln.de
-            %p.description
-              Konzept ∙ Screendesign ∙ Frontend Development
-            %a.link{href: "http://www.angeln.de", target: "_blank", title: "Zur Anglen.de Webseite"} Zur Webseite
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.woont-solutions.com", target: "_blank"} Woont Solutions
-          =image_tag "projects/angeln/angeln-preview.png", :alt => "Angeln.de", :class => "img-responsive"
 
       .col-xs-12.col-sm-6.col-md-3.item
         .project
@@ -156,18 +170,6 @@
               Konzept ∙ Screendesign ∙ Web Development
             %a.link{href: "http://www.braun-classics.de", target: "_blank", title: "Zur Braun-Classics Website"} Zur Webseite
           =image_tag "projects/braun-classics/braun-classics-preview.png", :alt => "Braun Classics", :class => "img-responsive"
-
-      .col-xs-12.col-sm-6.col-md-3.item
-        .project
-          .meta
-            %h3.title Odzala
-            %p.description
-              Konzept ∙ Screendesign
-            %a.link{href: "http://www.odzala.com", target: "_blank", title: "Zur Odzala Website"} Zur Webseite
-            %p.metaclient
-              Umgesetzt für
-              %a{href: "http://www.dpool.com", target: "_blank"} dpool
-          =image_tag "projects/odzala/odzala-preview.png", :alt => "Odzala", :class => "img-responsive"
 
       .col-xs-12.col-sm-6.col-md-3.item
         .project
@@ -197,7 +199,10 @@
           .award
             =image_tag "awards/promaxbda.gif", :alt => "Promaxbda"
           .meta
-            %h3.title Syfy Mystery Challenge
+            %h3.title
+              Syfy
+              %br
+              Mystery Challenge
             %p.description
               Konzept ∙ Screendesign ∙ Game Development
             .link-offline Nicht mehr Online
