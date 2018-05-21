@@ -1,0 +1,4 @@
+[clog]
+changelog = "CHANGELOG.md"
+repository = "https://bitbucket.org/wejustdostuff/middleman-site-wejustdostuff"
+from-latest-tag = true
