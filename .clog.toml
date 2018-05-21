@@ -1,0 +1,4 @@
+[clog]
+changelog = "CHANGELOG.md"
+repository = "https://github.com/weareinteractive/weareinteractive.com"
+from-latest-tag = true
