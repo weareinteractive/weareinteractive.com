@@ -1,20 +1,18 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem "middleman", "~> 3.3"
-gem "middleman-robots"
-gem "middleman-deploy"
-gem "middleman-livereload"
-gem "middleman-imageoptim"
-gem "middleman-minify-html"
-gem 'middleman-autoprefixer'
-gem "middleman-favicon-maker"
-gem "middleman-google-analytics"
-gem "middleman-search_engine_sitemap"
+gem 'middleman', '~> 4.2'
+gem "html-proofer", "~> 3.9"
+gem "middleman-robots", "~> 1.3"
+gem "middleman-compass", "~> 4.0"
+gem "middleman-sprockets", "~> 4.1"
+gem "middleman-livereload", "~> 3.4"
+gem "middleman-minify-html", "~> 3.4"
+gem 'middleman-autoprefixer', '~> 2.7'
+gem "middleman-favicon-maker", "~> 4.1"
+gem "middleman-google-analytics", "~> 3.0"
+gem "middleman-search_engine_sitemap", "~> 1.4"
+gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
 
-# For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
-# Cross-templating language block fix for Ruby 1.8
-platforms :mri_18 do
- gem "ruby18_source_location"
-end
