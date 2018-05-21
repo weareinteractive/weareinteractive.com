@@ -1,7 +1,9 @@
-.*
-*~
-/tmp/
-/build/
+.idea
+.cache
+.vscode
+.bundle
+.DS_Store
+.sass-cache
 /bower_components/
-!.htaccess
-!.git*
+/build/
+/tmp/
