@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+### 1.0.2 (2018-05-21)
+
+
+#### Bug Fixes
+
+*   mark offline links ([95244a55](https://github.com/weareinteractive/weareinteractive.com/commit/95244a554e0ece86892cd7d0b5a8720ad9b8ab90))
+
+
+
 <a name="1.0.1"></a>
 ### 1.0.1 (2018-05-21)
 
