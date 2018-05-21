@@ -1,4 +1,4 @@
-# middleman-site-weareinteractive
+# We Are Interactive
 
 > The www.weareinteractive.com website powered by Middleman.
 
@@ -6,95 +6,22 @@
 
 To build, run and deploy this project you need the following tools:
 
-* [Rvm](https://rvm.io/)
-* [Rake](http://rake.rubyforge.org/)
-* [Node & Npm](http://nodejs.org/)
 * [Bower](http://twitter.github.com/bower/)
+* [Bundler](https://bundler.io/)
 * [Middleman](http://middlemanapp.com)
-* [Middlesite](https://github.com/franklinkim/middlesite)
 
-### Rvm
+## Development
 
-To install `rvm` on your system run:
-
-```
-$ curl -L https://get.rvm.io | bash -s stable --ruby=1.9.3
+```bash
+bundle exec middleman server
 ```
 
-To update `rvm` run:
+## Build
 
-```
-$ rvm get stable
-```
-
-*Install [Jewelybox](http://jewelrybox.unfiniti.com/) to see installed Rubys and Gems through a nice GUI.*
-```
-
-### Rake
-
-To install `rake` run:
-
-```
-$ gem install rake
-```
-
-### Node & Npm
-
-Download and run the latest installer at [nodejs.org](http://nodejs.org/).
-
-### Bower
-
-To install `bower` run:
-
-```
-$ sudo npm install bower -g
-```
-
-### Middleman
-
-To install `middleman` run:
-
-```
-$ gem install middleman
-```
-
-### Middlesite
-
-To install `middlesite` run:
-
-```
-$ gem install middlesite
-```
-
-## Workspace
-
-### Setup
-
-To setup your workspace checkout the repository:
-
-```
-$ git clone ssh://git@bitbucket.org/weareinteractive/middleman-site-weareinteractive.git
-```
-
-To install all the dependencies run:
-
-```
-$ rake init
-```
-
-### Development
-
-With `middlesite` you have the following commands:
-
-```
-Commands:
-  middlesite build           # Generate build from sources
-  middlesite bump [TYPE]     # Bump version (patch|minor|major), commit, tag, and push.
-  middlesite deploy          # Build and deploy to server
-  middlesite help [COMMAND]  # Describe available commands or one specific command
-  middlesite init            # Initialize the workspace.
-  middlesite server          # Build and start server
+```bash
+bundle exec middleman build --clean
 ```
 
 ## License
-Copyright (c) 2013 We Are Interactive.
+
+Copyright (c) We Are Interactive.
