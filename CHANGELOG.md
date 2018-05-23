@@ -1,3 +1,14 @@
+<a name="1.1.0"></a>
+## 1.1.0 (2018-05-23)
+
+
+#### Features
+
+*   set https ([1e1766c6](https://github.com/weareinteractive/weareinteractive.com/commit/1e1766c6e16e58bcb068e80f363359c6d52207c2))
+*   remove depricated mailchimp ([16f268a9](https://github.com/weareinteractive/weareinteractive.com/commit/16f268a937e689c54528968aec3612dbecfdadad))
+
+
+
 <a name="1.0.2"></a>
 ### 1.0.2 (2018-05-21)
 
