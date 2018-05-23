@@ -5,6 +5,8 @@ raise IOError, 'Directory ./build does not exist. Run `middleman build` before r
 HTMLProofer.check_directory('./build', {
   :check_html => true,
   :check_favicon => true,
-  :check_img_http => true
+  :check_img_http => true,
+  :disable_external => true,
+  :internal_domains => ["https://www.weareinteractive.com"]
   #:http_status_ignore => [0,999,403,401]
 }).run

@@ -1,4 +1,5 @@
 # We Are Interactive
+[![Build Status](https://travis-ci.org/weareinteractive/weareinteractive.com.svg?branch=master)](https://travis-ci.org/weareinteractive/weareinteractive.com)
 
 > The www.weareinteractive.com website powered by Middleman.
 
