@@ -22,6 +22,12 @@ bundle exec middleman server
 bundle exec middleman build --clean
 ```
 
+## Test
+
+```bash
+ruby test.rb
+```
+
 ## License
 
 Copyright (c) We Are Interactive.
