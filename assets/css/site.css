@@ -2044,7 +2044,6 @@ html {
   font-size: 100%;
 }
 body {
-  margin-top: 70px;
   text-align: center;
   color: #ffffff;
   background: #191919;
@@ -2155,9 +2154,6 @@ textarea:focus {
   background-image: url("/assets/img/theme/background-04.jpg?1527067511");
 }
 @media (min-width: 768px) {
-  body {
-    font-size: 17px;
-  }
   #home .logo {
     margin-top: 35vh;
   }
