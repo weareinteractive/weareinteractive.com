@@ -2129,15 +2129,17 @@ textarea:focus {
   height: 100vh;
 }
 
-#home .logo > .logo-icon {
-  float: left;
-  width: 48px;
-  height: 48px;
+#home .logo {
+  margin-top: 20vh;
 }
-#home .logo > .logo-typo {
-  float: left;
-  margin-top: 15px;
-  margin-left: 5px;
+
+#home .logo .logo-icon {
+  width: 64px;
+  height: 64px;
+}
+#home .logo .logo-typo {
+  display: block;
+  margin-top: 5px;
   font-size: 1em;
 }
 .theme-1 #header .navbar-header .navbar-toggle {
@@ -2151,23 +2153,6 @@ textarea:focus {
 }
 .theme-4 #header .navbar-header .navbar-toggle {
   background: #e4980b;
-}
-
-#skrollr-body {
-  width: 100%;
-}
-#skrollr-body .wrapper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  border-top: 1px solid #222222;
-}
-#skrollr-body .header > .title {
-  font-size: 2.25em;
-  line-height: 1.2em;
-}
-#skrollr-body .header > .description {
-  margin-bottom: 70px;
 }
 .theme-1 #home {
   background-image: url("/assets/img/theme/background-01.jpg?1527067511");
@@ -2197,7 +2182,14 @@ textarea:focus {
   body {
     font-size: 17px;
   }
-  #home .logo > .logo-typo {
+  #home .logo {
+    margin-top: 35vh;
+  }
+  #home .logo .logo-icon {
+    width: 128px;
+    height: 128px;
+  }
+  #home .logo .logo-typo {
     font-size: 1.5em;
   }
 }
