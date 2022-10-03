@@ -2141,17 +2141,22 @@ textarea:focus {
   margin-top: 5px;
   font-size: 1em;
 }
+
 .theme-1 #home {
   background-image: url("/assets/img/theme/background-01.jpg?1527067511");
+  background-size: cover;
 }
 .theme-2 #home {
   background-image: url("/assets/img/theme/background-02.jpg?1527067511");
+  background-size: cover;
 }
 .theme-3 #home {
   background-image: url("/assets/img/theme/background-03.jpg?1527067511");
+  background-size: cover;
 }
 .theme-4 #home {
   background-image: url("/assets/img/theme/background-04.jpg?1527067511");
+  background-size: cover;
 }
 @media (min-width: 768px) {
   #home .logo {
